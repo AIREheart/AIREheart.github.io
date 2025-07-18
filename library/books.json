@@ -1,0 +1,14 @@
+{
+  "books": [
+    {
+      "title": "The Left Hand of Darkness",
+      "cover": "left-hand.jpg",
+      "review": "Hauntingly beautiful and genre-bending. Le Guin explores gender and identity through an alien lens."
+    },
+    {
+      "title": "Braiding Sweetgrass",
+      "cover": "braiding.jpg",
+      "review": "A poetic and profound blend of indigenous knowledge and scientific insight."
+    }
+  ]
+}
