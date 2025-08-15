@@ -5,15 +5,15 @@ url: "https://aireheart.github.io/"
 
 
 nav:
-  - title: "Home"
+  - title: "🪼 Home"
     url: /
-  - title: "Blog"
+  - title: "🪶 Blog"
     url: /blog/
-  - title: "Projects"
+  - title: "🔨 Projects"
     url: /projects/
-  - title: "Bookshelf"
+  - title: "📖 Bookshelf"
     url: /bookshelf/
-  - title: "About"
+  - title: "🏛️ About"
     url: /about/
 
 markdown: kramdown
