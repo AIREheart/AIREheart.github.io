@@ -1,9 +1,20 @@
 /* Reset & Base */
+
+
+/* Normalize margins, paddings, box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+img {
+  display: block; /* remove inline spacing */
+  max-width: 100%;
+  height: auto;
+}
+
+
 
 body {
   font-family: "Inter", system-ui, sans-serif;
