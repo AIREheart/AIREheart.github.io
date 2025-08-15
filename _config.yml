@@ -1,6 +1,21 @@
 title: "Aaisha says 👋🏽🌎"
-description: "Personal Site"
+description: "Where is Aaisha's 🧠 right now?"
 baseurl: ""
 url: "https://aireheart.github.io/"
+
+
+nav:
+  - title: "Home"
+    url: /
+  - title: "Blog"
+    url: /blog/
+  - title: "Projects"
+    url: /projects/
+  - title: "Bookshelf"
+    url: /bookshelf/
+  - title: "About"
+    url: /about/
+
+markdown: kramdown
 theme: minima
 plugins: []
