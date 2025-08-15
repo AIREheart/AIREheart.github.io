@@ -1,1 +1,6 @@
-
+title: "Aaisha says 👋🏽🌎"
+description: "Personal Site"
+baseurl: ""
+url: "https://aireheart.github.io/"
+theme: minima
+plugins: []
