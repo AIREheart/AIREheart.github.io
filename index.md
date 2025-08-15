@@ -4,15 +4,15 @@ title: Home
 ---
 
 
-***Aaisha says 👋🏽🌎***
+# **Aaisha says 👋🏽🌎**
 
-🏛️ **Gnothi seauthon** 
+## 🏛️ **Gnothi seauthon** 
 
-💭 **Mindful Consumptions** - routing more intentional thinking 
+### 💭 **Mindful Consumptions** - routing more intentional thinking 
 
-**Projects**
+## **Projects**
 
-**Library**
+## **Library**
 
-🌋 **Adventures** 
-**Whimsy** 🫧
+## 🌋 **Adventures** 
+## **Whimsy** 🫧
