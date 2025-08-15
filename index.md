@@ -5,7 +5,8 @@ title: Home
 
 
 Aaisha says 👋🏽🌎
- 🏛️ Gnothi seauthon 
+
+🏛️ Gnothi seauthon 
 
 💭 Mindful Consumptions - routing more intentional thinking 
 
