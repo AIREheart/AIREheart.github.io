@@ -1,31 +1,98 @@
-body {
-  font-family: system-ui, sans-serif;
+/* Reset & Base */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #fafafa;
+  padding-top: 60px; /* space for fixed nav */
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 2rem;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
+nav a:hover {
+  color: #0077cc;
+}
+
+/* Layout */
 main {
-  padding: 2rem;
   max-width: 800px;
-  margin: auto;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  background: #f4f4f4;
+  margin-top: 3rem;
+  padding: 2rem;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #666;
 }
 
+/* Blog posts */
+.post h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.post .date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+
+/* Projects */
+.project .description {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* Bookshelf */
+.book {
+  border: 1px solid #eee;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.book img {
+  max-width: 150px;
+  float: left;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+
+.book h2 {
+  margin-top: 0;
+}
