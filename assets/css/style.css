@@ -19,8 +19,8 @@ img {
 body {
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.6;
-  color: #591608;
-  background: #ccdbd3;
+  color: #3f463a;
+  background: #A9BA9D;
   padding-top: 60px; /* space for fixed nav */
   -webkit-font-smoothing: antialiased;
 
@@ -31,7 +31,6 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
   border-bottom: 1px solid #eee;
   padding: 1rem 2rem;
 }
