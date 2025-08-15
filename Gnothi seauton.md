@@ -1,3 +1,7 @@
+---
+layout: default
+title: Home
+---
 My theory of change/impact: low probability but high impact (that could sneak attack) ; so as to avoid black swans
 the right paths will appeal to our inenr whimsies (organically sparking joy to get gears turning)
 
