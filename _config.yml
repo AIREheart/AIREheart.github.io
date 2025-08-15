@@ -17,5 +17,5 @@ nav:
     url: /about/
 
 markdown: kramdown
-theme: minima
+# theme: minima
 plugins: []
