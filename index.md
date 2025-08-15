@@ -1,3 +1,9 @@
+---
+layout: default
+title: Home
+---
+
+
 Aaisha says 👋🏽🌎
  🏛️ Gnothi seauthon 
 
