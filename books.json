@@ -1,62 +1,8 @@
 [
   {
-    "title": "The Hitchhiker's Guide to the Galaxy",
-    "author": "Douglas Adams",
-    "cover": "https://placehold.co/120x180/7e3a6c/ffffff?text=Hitchhiker's",
-    "review": "A hilariously absurd and insightful journey through space. Required reading for anyone who loves clever satire and existential ponderings."
-  },
-  {
-    "title": "Dune",
-    "author": "Frank Herbert",
-    "cover": "https://placehold.co/120x180/2a4b5e/ffffff?text=Dune",
-    "review": "An epic science fiction masterpiece with intricate world-building, political intrigue, and ecological themes. Truly immersive."
-  },
-  {
-    "title": "1984",
-    "author": "George Orwell",
-    "cover": "https://placehold.co/120x180/1a1a1a/ffffff?text=1984",
-    "review": "A chilling dystopian classic that remains incredibly relevant today, exploring themes of surveillance, truth, and rebellion."
-  },
-  {
-    "title": "Pride and Prejudice",
-    "author": "Jane Austen",
-    "cover": "https://placehold.co/120x180/a0c49d/333333?text=Pride+Prejudice",
-    "review": "A timeless romance brimming with wit, social commentary, and unforgettable characters. A delightful read."
-  },
-  {
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "cover": "https://placehold.co/120x180/7a7a7a/ffffff?text=Gatsby",
-    "review": "A poignant tale of the American Dream, lost love, and the Jazz Age, beautifully written and deeply symbolic."
-  },
-  {
-    "title": "To Kill a Mockingbird",
-    "author": "Harper Lee",
-    "cover": "https://placehold.co/120x180/6c7a89/ffffff?text=Mockingbird",
-    "review": "A powerful and enduring story about justice, prejudice, and growing up in the American South. A true classic."
-  },
-  {
-    "title": "Sapiens: A Brief History of Humankind",
-    "author": "Yuval Noah Harari",
-    "cover": "https://placehold.co/120x180/e6b22c/000000?text=Sapiens",
-    "review": "A thought-provoking and ambitious overview of human history, challenging assumptions and offering fresh perspectives."
-  },
-  {
-    "title": "The Lord of the Rings",
-    "author": "J.R.R. Tolkien",
-    "cover": "https://placehold.co/120x180/4f5b5b/ffffff?text=LOTR",
-    "review": "The quintessential fantasy epic. A rich, immersive world with unforgettable characters and a timeless battle between good and evil."
-  },
-  {
-    "title": "Project Hail Mary",
-    "author": "Andy Weir",
-    "cover": "https://placehold.co/120x180/3f88c5/ffffff?text=Hail+Mary",
-    "review": "A brilliant, funny, and scientifically accurate sci-fi adventure. Couldn't put it down!"
-  },
-  {
-    "title": "Circe",
-    "author": "Madeline Miller",
-    "cover": "https://placehold.co/120x180/d36582/ffffff?text=Circe",
-    "review": "A captivating retelling of the Greek myth from Circe's perspective. Beautiful prose and a deeply empathetic character study."
+    "title": "Lapvona",
+    "author": "Ottessa Moshfegh",
+    "cover": "/assets/images/lapvona.jpg",
+    "review": "A most macabre borderline-Shakespearean affair. Moshfegh unleashes a fiefdom of bleak fury that settles into the pit of your stomach."
   }
 ]
