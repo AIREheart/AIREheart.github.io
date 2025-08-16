@@ -108,8 +108,7 @@ footer {
   gap: 2rem;
 }
 .bookshelf-grid .book {
-  background: white;
-  border: 1px solid #eee;
+    border: 1px solid #eee;
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
