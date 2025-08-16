@@ -8,12 +8,12 @@ title: Home
 
 
 
-### 🏛️ [**Gnothi seauthon**](AIREheart.github.io/about/) *(know thyself)*
+### 🏛️ [**Gnothi seauthon**](/about/) *(know thyself)*
 
 ### 💭 **Mindful Consumptions** - routing more intentional thinking 
 
 
-## 🌋 **Adventures** 
+### 🌋 **Adventures** 
 
 
-## **Whimsy** 🫧
+### **Whimsy** 🫧
