@@ -10,7 +10,7 @@ title: Home
 
 ### 🏛️ [**Gnothi seauthon**](/about/) *(know thyself)*
 
-### 💭 **Mindful Consumptions** - routing more intentional thinking 
+### 💭 [**Mindful Consumptions**](/MindfulConsumption/) - routing more intentional thinking 
 
 
 ### 🌋 **Adventures** 
