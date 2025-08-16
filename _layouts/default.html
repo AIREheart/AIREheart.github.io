@@ -4,38 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - Your Site Name</title>
+    <title>{{ page.title }} - {{ site.title }}</title>
     <!-- Basic Jekyll styling (if you have it) -->
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
-    <!-- IMPORTANT: Tailwind CSS CDN should be here -->
+    <!-- IMPORTANT: Tailwind CSS CDN for global utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- IMPORTANT: Google Fonts for 'Inter' should be here -->
+    <!-- IMPORTANT: Google Fonts for 'Inter' -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Any other global CSS or scripts for your entire site -->
 </head>
-<body class="bg-gray-100 flex flex-col items-center">
-    <!-- Your global header/navigation would go here -->
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Your global header/navigation, included from _includes/navbar.html -->
     <header class="w-full bg-white shadow-md py-4 mb-8">
         <nav class="container mx-auto flex justify-between items-center px-4">
-            <a href="{{ "/" | relative_url }}" class="text-2xl font-bold text-gray-800">My Site</a>
+            <a href="{{ "/" | relative_url }}" class="text-2xl font-bold text-gray-800">{{ site.title | split: ' ' | first }}</a>
             <ul class="flex space-x-4">
-                <li><a href="{{ "/about/" | relative_url }}" class="text-gray-600 hover:text-gray-900">About</a></li>
-                <li><a href="{{ "/blog/" | relative_url }}" class="text-gray-600 hover:text-gray-900">Blog</a></li>
-                <li><a href="{{ "/bookshelf/" | relative_url }}" class="text-gray-600 hover:text-gray-900">Bookshelf</a></li>
+                {% for item in site.nav %}
+                    <li><a href="{{ item.url | relative_url }}" class="text-gray-600 hover:text-gray-900">{{ item.title }}</a></li>
+                {% endfor %}
             </ul>
         </nav>
     </header>
 
-    <main class="container mx-auto flex flex-col items-center px-4 py-8">
-        <!-- This is where the content from bookshelf.html will be injected -->
+    <main class="container mx-auto flex flex-col items-center px-4 py-8 flex-grow">
+        <!-- This is where the content from individual pages (like bookshelf.html) will be injected -->
         {{ content }}
     </main>
 
-    <!-- Your global footer would go here -->
+    <!-- Your global footer, included from _includes/footer.html -->
     <footer class="w-full bg-gray-800 text-white text-center py-4 mt-8">
-        <p>&copy; {{ site.time | date: "%Y" }} Your Name. All rights reserved.</p>
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. Built with Jekyll.</p>
     </footer>
 </body>
 </html>
