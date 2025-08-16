@@ -17,4 +17,6 @@ nav:
     url: /about/
 
 markdown: kramdown
-plugins: []
+plugins: 
+  - jekyll-feed
+  - jekyll-seo-tag
