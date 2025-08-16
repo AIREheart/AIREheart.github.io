@@ -8,7 +8,7 @@ title: Home
 
 
 
-### 🏛️ [**Gnothi seauthon**](https://aireheart.github.io/Gnothiseauton.md) *(know thyself)*
+### 🏛️ [**Gnothi seauthon**](AIREheart.github.io/about/) *(know thyself)*
 
 ### 💭 **Mindful Consumptions** - routing more intentional thinking 
 
