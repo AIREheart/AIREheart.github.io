@@ -192,3 +192,101 @@ footer {
 .book h2 {
   margin-top: 0;
 }
+
+/* ==========================
+   Bookshelf Page Styling
+   ========================== */
+
+.bookshelf-page {
+  background: #fdfdfd;
+  padding: 2rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bookshelf-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #4b3832;
+}
+
+/* Shelf container */
+.bookshelf-page .shelf {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  padding: 2rem 0;
+  border-bottom: 10px solid #c8a165; /* wood-like divider between rows */
+  background: linear-gradient(180deg, #f3e5ab, #deb887);
+  box-shadow: inset 0 -5px 10px rgba(0,0,0,0.1);
+}
+
+/* Book card */
+.bookshelf-page .book {
+  position: relative;
+  width: 160px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.bookshelf-page .book img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.bookshelf-page .book:hover img {
+  transform: translateY(-6px);
+}
+
+/* Hover info panel */
+.bookshelf-page .book-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.95);
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.bookshelf-page .book:hover .book-info {
+  opacity: 1;
+}
+
+/* Book info text */
+.bookshelf-page .book-info h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #4b3832;
+}
+
+.bookshelf-page .book-info p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.bookshelf-page .book-info a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #6b4226;
+  text-decoration: none;
+  border-bottom: 1px solid #6b4226;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.bookshelf-page .book-info a:hover {
+  color: #a0522d;
+  border-bottom-color: #a0522d;
+}
