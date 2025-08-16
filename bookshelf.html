@@ -6,8 +6,11 @@ permalink: /bookshelf/
 
 <!-- Specific CSS for the bookshelf components -->
 <style>
+    /* These styles define the look and feel of your interactive bookshelf.
+       They are placed here because they are specific to this page's functionality. */
+
     .bookshelf-container {
-        background-color: #634221; /* Light brown for bookshelf base */
+        background-color: #b38f66; /* Light brown for bookshelf base */
         border-radius: 1rem;
         padding: 2rem;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -35,7 +38,7 @@ permalink: /bookshelf/
         left: 0;
         right: 0;
         height: 1rem; /* Thickness of the wooden shelf */
-        background-color: #7b5842; /* Lighter brown for shelf surface */
+        background-color: #3b1908; /* Lighter brown for shelf surface */
         border-radius: 0 0 0.5rem 0.5rem;
         box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.2);
         z-index: 0; /* Behind the books */
@@ -268,7 +271,8 @@ permalink: /bookshelf/
             const bookCover = document.createElement('div');
             bookCover.classList.add('book-cover');
             const coverImg = document.createElement('img');
-            coverImg.src = book.cover;
+            // Use relative_url for covers defined with Jekyll paths, otherwise use as is
+            coverImg.src = book.cover.startsWith('/') ? "{{ site.baseurl }}" + book.cover : book.cover;
             coverImg.alt = book.title + " Cover";
             // Fallback for broken images: uses a placeholder if the image fails to load
             coverImg.onerror = function() {
@@ -299,8 +303,7 @@ permalink: /bookshelf/
         bookshelf.style.display = 'none'; // Hide bookshelf during loading
 
         try {
-            // Use Jekyll's site.baseurl to ensure the path to books.json is correct
-            // This is crucial for GitHub Pages deployments in subdirectories.
+            // Use Jekyll's site.baseurl for the JSON file path
             const response = await fetch('{{ site.baseurl }}/books.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -311,7 +314,7 @@ permalink: /bookshelf/
             console.error("Could not fetch books data, using default data:", error);
             // Fallback to defaultBooksData if fetch fails
             createBookshelf(defaultBooksData);
-            bookshelf.innerHTML += `<p class="text-orange-600 text-center mt-4">Could not load 'books.json'. Displaying sample books instead. (This might happen when viewing locally without a server or if the file path is incorrect on GitHub Pages)</p>`;
+            bookshelf.innerHTML += `<p class="text-orange-600 text-center mt-4">Could not load 'books.json'. Displaying sample books instead. (This can happen when viewing locally without a server or if the file path is incorrect on GitHub Pages)</p>`;
         } finally {
             loadingSpinner.style.display = 'none'; // Hide spinner
             bookshelf.style.display = 'flex'; // Show bookshelf
