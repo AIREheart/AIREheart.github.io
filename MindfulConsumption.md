@@ -1,3 +1,7 @@
+---
+layout: default
+title: Blog
+---
 
 Key things in my journey of reading broadly while attempting to resonate with specifics: 
 > George Mason’s The Pandora Report
