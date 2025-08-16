@@ -82,6 +82,44 @@ footer {
   color: #999;
   margin-bottom: 1.5rem;
 }
+/* Blog list */
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+.post-list li {
+  margin-bottom: 2rem;
+}
+
+/* Projects */
+.project-list {
+  display: grid;
+  gap: 2rem;
+}
+.project {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+/* Bookshelf grid */
+.bookshelf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.bookshelf-grid .book {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.bookshelf-grid img {
+  max-height: 250px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
 
 /* Projects */
 .project .description {
