@@ -12,5 +12,5 @@ digitization of biology (propelling experimentation of living organisms into the
 
 ideations of interest: technical governance wrt misuse risk and threat simulations, alignment and interpretability, model-agnostic evaluations, **autonomous labs**, data standards for collection and aggregation, model validation/QCing, 
 
-
+\
 ![Todo](https://github.com/user-attachments/assets/2673d362-8f41-4229-80f5-36cb63bbd41b)
