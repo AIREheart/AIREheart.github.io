@@ -14,7 +14,7 @@ Follow my insights on technology, biology, policy, and personal growth.
 
 <hr class="border-t-2 border-D9E2D2 my-8 w-1/3 mx-auto rounded-full">
 
-🏛️ Gnothi seauthon (know thyself)
+<h2 >🏛️ Gnothi seauthon (know thyself) <h2>
 <p class="text-gray-600 text-sm italic mb-4">My theory of change/impact: low probability but high impact (that could sneak attack); so as to avoid black swans.</p>
 
 💭 Mindful Consumptions - routing more intentional thinking
