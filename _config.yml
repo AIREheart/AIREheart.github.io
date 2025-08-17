@@ -14,10 +14,15 @@ nav:
     url: /blog/
   - title: "🔨 Projects"
     url: /projects/
+   - title: "🌋 Adventures"
+    url: /adventures/
+  - title: "🫧 Whimsy"
+    url: /whimsy/
   - title: "📖 Bookshelf"
     url: /bookshelf/
   - title: "🏛️ About"
     url: /about/
+
 
 markdown: kramdown
 plugins: 
