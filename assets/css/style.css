@@ -1,6 +1,4 @@
 /* Reset & Base */
-
-/* Normalize margins, paddings, box-sizing */
 * {
   margin: 0;
   padding: 0;
@@ -14,44 +12,61 @@ img {
 }
 
 body {
-  font-family: "Inter", system-ui, sans-serif;
-  line-height: 1.6;
-  color: #3A403A; /* Updated: Deep Forest Green/Charcoal for main text */
-  background: #F8F6F4; /* Updated: Soft Creamy White/Warm Beige background */
+  font-family: "Inter", system-ui, sans-serif; /* Inter for body text */
+  line-height: 1.7; /* Slightly more spacious line height */
+  color: #949fcf; /* Dark Forest Green/Charcoal for main text */
+  background: #ccd7d5; /* Soft Cream/Off-White background */
   padding-top: 60px; /* space for fixed nav */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* For better font rendering */
 }
+
+/* Headings - Using Merriweather for a more distinct feel */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif; /* Merriweather for headings */
+    color: #072669; /* Deep Teal/Emerald for headings */
+    line-height: 1.2;
+    margin-top: 1.5em; /* Add some top margin for spacing */
+    margin-bottom: 0.8em; /* Add some bottom margin for spacing */
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; }
 
 /* Navbar */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Updated: Softer, subtle border */
-  background-color: #2A5C50; /* Updated: Deep Teal/Blue-Green */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+  background-color: #b9c2d9; /* Deep Teal/Emerald */
   padding: 1rem 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Added: Subtle shadow for depth */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More pronounced, soft shadow */
   z-index: 100; /* Ensure navbar stays on top */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem; /* Increased gap for better spacing */
   justify-content: center;
 }
 
 nav a {
   text-decoration: none;
-  color: #F8F6F4; /* Updated: Creamy white for links */
+  color: #FDFCF7; /* Creamy white for links */
   font-weight: 500;
-  transition: color 0.3s ease, transform 0.2s ease; /* Added transform for hover effect */
+  font-size: 1.05rem; /* Slightly larger nav links */
+  transition: color 0.3s ease, transform 0.2s ease;
   position: relative;
+  padding: 0.5rem 0; /* Add padding for larger click/touch area */
 }
 
 nav a:hover {
-  color: #6F9C70; /* Updated: Muted Leaf Green on hover */
-  transform: translateY(-2px); /* Slight lift on hover */
+  color: #889db0; /* Muted Sage Green on hover */
+  transform: translateY(-3px); /* More noticeable lift on hover */
 }
 
 nav a::after {
@@ -59,9 +74,9 @@ nav a::after {
     position: absolute;
     width: 0%;
     height: 2px;
-    bottom: -5px;
+    bottom: 0; /* Underline aligns to bottom of padding */
     left: 0;
-    background-color: #6F9C70; /* Muted Leaf Green for underline */
+    background-color: #d0c7dd; /* Muted Sage Green for underline */
     transition: width 0.3s ease-in-out;
 }
 
@@ -69,74 +84,97 @@ nav a:hover::after {
     width: 100%;
 }
 
-
 /* Layout - Main content area */
 main {
-  max-width: 800px;
+  max-width: 900px; /* Slightly wider main content area */
   margin: 2rem auto;
-  padding: 2rem; /* Increased padding */
-  background-color: #FFFFFF; /* White background for content */
-  border-radius: 12px; /* Consistent rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
+  padding: 2.5rem; /* Increased padding */
+  background-color: #a0addd; /* Pure white background for content blocks */
+  border-radius: 16px; /* Larger, softer rounded corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* Stronger, diffused shadow for content blocks */
 }
 
 /* Footer */
 footer {
   text-align: center;
-  margin-top: 4rem; /* Increased margin */
-  padding: 2rem;
-  border-top: 1px solid #D9E2D2; /* Updated: Light greenish-grey border */
-  font-size: 0.9rem;
-  color: #666; /* Kept existing for now, but could be adjusted */
-  background-color: #2A5C50; /* Updated: Deep Teal/Blue-Green */
-  color: #F8F6F4; /* Updated: Creamy white text */
+  margin-top: 5rem; /* More space before footer */
+  padding: 2.5rem; /* Increased padding */
+  background-color: #180947; /* Deep Teal/Emerald */
+  color: #FDFCF7; /* Creamy white text */
+  font-size: 0.95rem;
+  border-top: none; /* Removed border, integrated with background color */
+}
+
+/* General Link Styling (outside of navigation) */
+a {
+    color: #2A5A4A; /* Deep Teal/Emerald for links */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #6C9981; /* Muted Sage Green on hover */
+    text-decoration: underline;
 }
 
 /* Blog posts */
 .post h1 {
-  margin-bottom: 0.75rem; /* Adjusted margin */
-  font-size: 2.2rem; /* Slightly larger heading */
-  color: #2A5C50; /* Updated: Deep Teal/Blue-Green for headings */
+  margin-bottom: 0.75rem;
+  font-size: 2.5rem; /* Adjusted for consistency with new h1 */
 }
 
 .post .date {
-  font-size: 0.95rem; /* Slightly larger date font */
-  color: #6F9C70; /* Updated: Muted Leaf Green for dates */
-  margin-bottom: 2rem; /* Adjusted margin */
+  font-size: 1rem;
+  color: #6C9981; /* Muted Sage Green for dates */
+  margin-bottom: 2rem;
+  display: block; /* Ensure it takes its own line */
 }
 
-/* Blog list */
+/* Blog list - Adjusted to remove unwanted "indenting scheme" and improve visuals */
 .post-list {
   list-style: none;
-  padding: 0;
+  padding: 0; /* Remove default list padding */
+  margin: 0; /* Remove default list margin */
 }
 .post-list li {
-  margin-bottom: 2.5rem; /* Increased margin */
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #D9E2D2; /* Consistent border style */
+  margin-bottom: 3rem; /* Increased space between posts */
+  padding-bottom: 2rem; /* More padding below content before border */
+  border-bottom: 1px solid #E0E5D7; /* Consistent subtle border */
+  transition: background-color 0.3s ease; /* Smooth background transition on hover */
 }
 .post-list li:last-child {
-  border-bottom: none; /* No border on last item */
+  border-bottom: none; /* No border on the very last item */
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
-.post-list li h2 a {
-    color: #3A403A; /* Dark text for blog post titles */
+.post-list li h3 { /* Using h3 for blog titles in list */
+    font-size: 1.5rem; /* Clear, prominent title */
+    margin-top: 0; /* No extra top margin on list items */
+    margin-bottom: 0.5rem;
+}
+.post-list li h3 a {
+    color: #3D473E; /* Dark text for blog post titles */
     text-decoration: none;
     transition: color 0.3s ease;
 }
-.post-list li h2 a:hover {
-    color: #2A5C50; /* Deep Teal/Blue-Green on hover */
+.post-list li h3 a:hover {
+    color: #2A5A4A; /* Deep Teal/Emerald on hover */
     text-decoration: underline;
+}
+.post-list li p {
+    color: #4A4A4A; /* Softer gray for excerpt */
+    margin-bottom: 0.75rem;
 }
 
 
 /* Projects */
 .project-list {
   display: grid;
-  gap: 2.5rem; /* Consistent gap */
+  gap: 3rem; /* More space between projects */
 }
 .project {
-  border-bottom: 1px solid #D9E2D2; /* Consistent border style */
-  padding-bottom: 1.5rem; /* Adjusted padding */
+  border-bottom: 1px solid #E0E5D7; /* Consistent subtle border */
+  padding-bottom: 2rem; /* More padding below content before border */
 }
 .project:last-child {
   border-bottom: none; /* No border on last project */
@@ -145,26 +183,57 @@ footer {
 /* Projects */
 .project .description {
   font-style: italic;
-  margin-bottom: 1.2rem; /* Adjusted margin */
-  color: #5A605A; /* Slightly lighter text for descriptions */
+  margin-bottom: 1.5rem; /* Adjusted margin */
+  color: #5A605A; /* Softer gray for descriptions */
 }
 
-/* Media Queries for responsiveness - these remain largely similar */
-@media screen and (min-width: 600px) {
-  .project-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* General Link Styling (outside of navigation) */
-a {
-    color: #2A5C50; /* Deep Teal/Blue-Green for links */
+/* General button styling (if you add buttons later) */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: #2A5A4A; /* Deep Teal/Emerald */
+    color: #FDFCF7;
+    border-radius: 8px;
     text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-a:hover {
-    color: #6F9C70; /* Muted Leaf Green on hover */
-    text-decoration: underline;
+.btn:hover {
+    background-color: #6C9981; /* Muted Sage Green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.4rem; }
+    nav ul { gap: 1rem; }
+    nav a { font-size: 0.95rem; }
+    .post-list li { margin-bottom: 2rem; padding-bottom: 1.5rem; }
+    .project-list { gap: 2rem; }
+    .project { padding-bottom: 1.5rem; }
+}
+
+@media screen and (max-width: 600px) {
+  .project-list {
+    grid-template-columns: 1fr; /* Stack projects vertically on smaller screens */
+  }
+  nav ul { flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+  nav a { padding: 0.3rem 0.5rem; }
+}
+
+@media screen and (max-width: 480px) {
+    body { padding-top: 50px; }
+    nav { padding: 0.8rem 1rem; }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    main { padding: 1rem; margin: 1rem 0.5rem; }
+}
