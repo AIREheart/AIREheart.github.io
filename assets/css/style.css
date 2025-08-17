@@ -16,8 +16,8 @@ img {
 body {
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.6;
-  color: #3f463a;
-  background: #A9BA9D;
+  color: #3A403A; /* Updated: Deep Forest Green/Charcoal for main text */
+  background: #F8F6F4; /* Updated: Soft Creamy White/Warm Beige background */
   padding-top: 60px; /* space for fixed nav */
   -webkit-font-smoothing: antialiased;
 }
@@ -27,9 +27,11 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid #434c3f;
-  background-color:#67725f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Updated: Softer, subtle border */
+  background-color: #2A5C50; /* Updated: Deep Teal/Blue-Green */
   padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Added: Subtle shadow for depth */
+  z-index: 100; /* Ensure navbar stays on top */
 }
 
 nav ul {
@@ -41,42 +43,66 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #444;
+  color: #F8F6F4; /* Updated: Creamy white for links */
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.3s ease, transform 0.2s ease; /* Added transform for hover effect */
+  position: relative;
 }
 
 nav a:hover {
-  color: #0077cc;
+  color: #6F9C70; /* Updated: Muted Leaf Green on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
 }
 
-/* Layout */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #6F9C70; /* Muted Leaf Green for underline */
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* Layout - Main content area */
 main {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 2rem; /* Increased padding */
+  background-color: #FFFFFF; /* White background for content */
+  border-radius: 12px; /* Consistent rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
 }
 
 /* Footer */
 footer {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 4rem; /* Increased margin */
   padding: 2rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #D9E2D2; /* Updated: Light greenish-grey border */
   font-size: 0.9rem;
-  color: #666;
+  color: #666; /* Kept existing for now, but could be adjusted */
+  background-color: #2A5C50; /* Updated: Deep Teal/Blue-Green */
+  color: #F8F6F4; /* Updated: Creamy white text */
 }
 
 /* Blog posts */
 .post h1 {
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
+  margin-bottom: 0.75rem; /* Adjusted margin */
+  font-size: 2.2rem; /* Slightly larger heading */
+  color: #2A5C50; /* Updated: Deep Teal/Blue-Green for headings */
 }
 
 .post .date {
-  font-size: 0.9rem;
-  color: #999;
-  margin-bottom: 1.5rem;
+  font-size: 0.95rem; /* Slightly larger date font */
+  color: #6F9C70; /* Updated: Muted Leaf Green for dates */
+  margin-bottom: 2rem; /* Adjusted margin */
 }
 
 /* Blog list */
@@ -85,33 +111,60 @@ footer {
   padding: 0;
 }
 .post-list li {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem; /* Increased margin */
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #D9E2D2; /* Consistent border style */
 }
+.post-list li:last-child {
+  border-bottom: none; /* No border on last item */
+}
+.post-list li h2 a {
+    color: #3A403A; /* Dark text for blog post titles */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.post-list li h2 a:hover {
+    color: #2A5C50; /* Deep Teal/Blue-Green on hover */
+    text-decoration: underline;
+}
+
 
 /* Projects */
 .project-list {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem; /* Consistent gap */
 }
 .project {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1rem;
+  border-bottom: 1px solid #D9E2D2; /* Consistent border style */
+  padding-bottom: 1.5rem; /* Adjusted padding */
+}
+.project:last-child {
+  border-bottom: none; /* No border on last project */
 }
 
 /* Projects */
 .project .description {
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem; /* Adjusted margin */
+  color: #5A605A; /* Slightly lighter text for descriptions */
 }
 
-.project-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
+/* Media Queries for responsiveness - these remain largely similar */
 @media screen and (min-width: 600px) {
   .project-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* General Link Styling (outside of navigation) */
+a {
+    color: #2A5C50; /* Deep Teal/Blue-Green for links */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #6F9C70; /* Muted Leaf Green on hover */
+    text-decoration: underline;
+}
+
