@@ -2,7 +2,7 @@
 layout: default 
 title: Home
 ---
-# Aaisha says 👋🏽🌎
+
 <div class="intro-section my-8 text-center">
 <p class="text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
 Hello there! This is where my mind wanders, where thoughts take shape, and where I share my journey of curious exploration across various domains.
