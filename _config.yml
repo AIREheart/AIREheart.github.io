@@ -4,6 +4,9 @@ baseurl: ""
 url: "https://aireheart.github.io/"
 
 
+# Add this line for the new navbar brand text
+navbar_brand: "Aaisha says 👋🏽🌎" # <--- YOUR NEW NAVBAR TEXT HERE
+
 nav:
   - title: "🪼 Home"
     url: /
