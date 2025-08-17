@@ -22,7 +22,7 @@ Follow my insights on technology, biology, policy, and personal growth.
 
 <h2 class="text-3xl font-bold text-center mb-8 text-2A5C50">Latest Musings ✍️</h2>
 <ul class="post-list max-w-xl mx-auto">
-{% for post in site.posts limit:3 %} {# Limits to the 3 most recent posts #}
+{% for post in site.posts limit:3 %}
 <li>
 <h3 class="text-xl font-semibold mb-1">
 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
