@@ -20,13 +20,22 @@
 <body class="bg-FDFCF7 flex flex-col min-h-screen">
     <!-- Your global header/navigation -->
     <header class="w-full bg-2A5A4A shadow-md py-4 mb-8">
-        <nav class="container mx-auto flex justify-between items-center px-4">
-            <a href="{{ "/" | relative_url }}" class="text-3xl font-bold text-FDFCF7">{{ site.title | split: ' ' | first }}</a>
-            <ul class="flex space-x-4">
-                {% for item in site.nav %}
-                    <li><a href="{{ item.url | relative_url }}" class="text-FDFCF7 hover:text-6C9981 transition-colors">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
+        <nav class="w-full">
+            <div class="container mx-auto flex justify-between items-center px-4">
+                <!-- Navbar Brand/Title -->
+                <a href="{{ "/" | relative_url }}" class="text-3xl font-bold text-FDFCF7">
+                    {% if site.navbar_brand %}
+                        {{ site.navbar_brand }}
+                    {% else %}
+                        {{ site.title | split: ' ' | first }}
+                    {% endif %}
+                </a>
+                <ul class="flex space-x-4">
+                    {% for item in site.nav %}
+                        <li><a href="{{ item.url | relative_url }}" class="text-FDFCF7 hover:text-6C9981 transition-colors">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
         </nav>
     </header>
 
