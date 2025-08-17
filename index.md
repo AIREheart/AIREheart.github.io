@@ -35,6 +35,3 @@ Follow my insights on technology, biology, policy, and personal growth.
 </ul>
 
 <hr class="border-t-2 border-D9E2D2 my-8 w-1/3 mx-auto rounded-full">
-
-🌋 Adventures
-Whimsy 🫧
