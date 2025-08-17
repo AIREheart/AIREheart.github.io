@@ -3,6 +3,7 @@ layout: default
 title: Home
 ---
 
+<hr class="border-t-2 border-D9E2D2 my-8 w-1/3 mx-auto rounded-full">
 <div class="intro-section my-8 text-center">
 <p class="text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
 Hello there! This is where my mind wanders, where thoughts take shape, and where I share my journey of curious exploration across various domains.
@@ -11,8 +12,6 @@ Hello there! This is where my mind wanders, where thoughts take shape, and where
 Follow my insights on technology, biology, policy, and personal growth.
 </p>
 </div>
-
-<hr class="border-t-2 border-D9E2D2 my-8 w-1/3 mx-auto rounded-full">
 
 <h2 >🏛️ Gnothi seauthon (know thyself) <h2>
 <p class="text-gray-600 text-sm italic mb-4">My theory of change/impact: low probability but high impact (that could sneak attack); so as to avoid black swans.</p>
