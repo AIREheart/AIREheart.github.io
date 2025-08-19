@@ -89,7 +89,6 @@ main {
   max-width: 900px; /* Slightly wider main content area */
   margin: 2rem auto;
   padding: 2.5rem; /* Increased padding */
-  background-color: #a0addd; /* Pure white background for content blocks */
   border-radius: 16px; /* Larger, softer rounded corners */
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* Stronger, diffused shadow for content blocks */
 }
