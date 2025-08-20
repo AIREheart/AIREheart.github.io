@@ -239,13 +239,13 @@ a:hover {
 
 /* --------- NAV BAR --------- */
 nav {
-  background-color: #b9aedc; /* lavender */
+  background-color: #b9c2d9ff; /* periwinkle blue */
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
@@ -266,7 +266,7 @@ nav a:hover {
   align-items: flex-start;
   gap: 3rem;
   padding: 3rem 6rem;
-  background-color: #e8f0f0; /* soft background */
+  background-color: #CCD7D5; /* soft background */
   min-height: calc(100vh - 80px); /* fill viewport minus nav */
 }
 
