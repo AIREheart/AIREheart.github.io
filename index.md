@@ -25,7 +25,7 @@ title: Home
       There is a high likelihood of finding me:
     <ul class="intro-list">
       <li>🌊 Drifting into existentialistic pondering (bordering on nihilism)</li>
-      <li>📖 Reading <a href="https://aireheart.github.io/bookshelf/"></li>
+      <li>📖 <a href="https://aireheart.github.io/bookshelf/">Reading</a></li>
       <li>🧪 Flirting with disciplines of which I do not have the necessary prerequisites</li>
     </ul>
 
