@@ -23,6 +23,16 @@ nav:
   - title: "🏛️ About"
     url: /about/
 
+sass:
+  style: compressed
+
+# Default site-wide fonts
+defaults:
+  - scope:
+      path: ""
+    values:
+      font_family: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+
 
 markdown: kramdown
 plugins: 
