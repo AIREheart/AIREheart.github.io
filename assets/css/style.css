@@ -12,234 +12,232 @@ img {
 }
 
 body {
-  font-family: "Lora", system-ui, sans-serif; /* Lora for body text */
-  line-height: 1.7; /* Slightly more spacious line height */
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 400;
   color: #FFFFFF; /* white for main text */
-  background: #ccd7d5; /* Soft green/grey eucalpytus background */
+  background: #ccd7d5; /* Soft green/grey eucalyptus background */
   padding-top: 60px; /* space for fixed nav */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; /* For better font rendering */
 }
 
-/* Headings - Using Merriweather for a more distinct feel */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Lora", serif; /* Lora for headings */
-    color: #072669; /* Deep Teal/Emerald for headings */
-    line-height: 1.2;
-    margin-top: 1.5em; /* Add some top margin for spacing */
-    margin-bottom: 0.8em; /* Add some bottom margin for spacing */
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #072669; /* Deep Teal/Emerald for headings */
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
 }
 
-h1 { font-size: 2.8rem; }
-h2 { font-size: 2.2rem; }
-h3 { font-size: 1.8rem; }
-h4 { font-size: 1.4rem; }
+h1 { font-size: 3rem; font-weight: 700; }
+h2 { font-size: 2.4rem; font-weight: 600; }
+h3 { font-size: 1.9rem; font-weight: 600; }
+h4 { font-size: 1.5rem; font-weight: 500; }
 
 /* Navbar */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
-  background-color: #b9c2d9; /* Lilac nav br */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #b9c2d9;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More pronounced, soft shadow */
-  z-index: 100; /* Ensure navbar stays on top */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem; /* Increased gap for better spacing */
+  gap: 2rem;
   justify-content: center;
 }
 
 nav a {
   text-decoration: none;
-  color: #FDFCF7; /* Creamy white for links */
+  color: #FDFCF7;
   font-weight: 500;
-  font-size: 1.05rem; /* Slightly larger nav links */
+  font-size: 1.05rem;
   transition: color 0.3s ease, transform 0.2s ease;
   position: relative;
-  padding: 0.5rem 0; /* Add padding for larger click/touch area */
+  padding: 0.5rem 0;
 }
 
 nav a:hover {
-  color: #889db0; /* Muted Sage Green on hover */
-  transform: translateY(-3px); /* More noticeable lift on hover */
+  color: #889db0;
+  transform: translateY(-3px);
 }
 
 nav a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: 0; /* Underline aligns to bottom of padding */
-    left: 0;
-    background-color: #d0c7dd; /* Muted Sage Green for underline */
-    transition: width 0.3s ease-in-out;
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d0c7dd;
+  transition: width 0.3s ease-in-out;
 }
 
 nav a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 /* Layout - Main content area */
 main {
-  max-width: 900px; /* Slightly wider main content area */
+  max-width: 900px;
   margin: 2rem auto;
-  padding: 2.5rem; /* Increased padding */
-  border-radius: 16px; /* Larger, softer rounded corners */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* Stronger, diffused shadow for content blocks */
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  margin-top: 5rem; /* More space before footer */
-  padding: 2.5rem; /* Increased padding */
-  background-color: #180947; /* Royal blue footer */
-  color: #FDFCF7; /* Creamy white text */
+  margin-top: 5rem;
+  padding: 2.5rem;
+  background-color: #180947;
+  color: #FDFCF7;
   font-size: 0.95rem;
-  border-top: none; /* Removed border, integrated with background color */
+  border-top: none;
 }
 
-/* General Link Styling (outside of navigation) */
+/* General Link Styling */
 a {
-    color: #2A5A4A; /* Deep Teal/Emerald for links */
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+  color: #2A5A4A;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
-    color: #6C9981; /* Muted Sage Green on hover */
-    text-decoration: underline;
+  color: #6C9981;
+  text-decoration: underline;
 }
 
 /* Blog posts */
 .post h1 {
   margin-bottom: 0.75rem;
-  font-size: 2.5rem; /* Adjusted for consistency with new h1 */
+  font-size: 3rem; /* aligned with global h1 */
 }
 
 .post .date {
   font-size: 1rem;
-  color: #6C9981; /* Muted Sage Green for dates */
+  color: #6C9981;
   margin-bottom: 2rem;
-  display: block; /* Ensure it takes its own line */
+  display: block;
 }
 
-/* Blog list - Adjusted to remove unwanted "indenting scheme" and improve visuals */
+/* Blog list */
 .post-list {
   list-style: none;
-  padding: 0; /* Remove default list padding */
-  margin: 0; /* Remove default list margin */
+  padding: 0;
+  margin: 0;
 }
 .post-list li {
-  margin-bottom: 3rem; /* Increased space between posts */
-  padding-bottom: 2rem; /* More padding below content before border */
-  border-bottom: 1px solid #E0E5D7; /* Consistent subtle border */
-  transition: background-color 0.3s ease; /* Smooth background transition on hover */
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #E0E5D7;
+  transition: background-color 0.3s ease;
 }
 .post-list li:last-child {
-  border-bottom: none; /* No border on the very last item */
+  border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-.post-list li h3 { /* Using h3 for blog titles in list */
-    font-size: 1.5rem; /* Clear, prominent title */
-    margin-top: 0; /* No extra top margin on list items */
-    margin-bottom: 0.5rem;
+.post-list li h3 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 .post-list li h3 a {
-    color: #3D473E; /* Dark text for blog post titles */
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #3D473E;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 .post-list li h3 a:hover {
-    color: #2A5A4A; /* Deep Teal/Emerald on hover */
-    text-decoration: underline;
+  color: #2A5A4A;
+  text-decoration: underline;
 }
 .post-list li p {
-    color: #4A4A4A; /* Softer gray for excerpt */
-    margin-bottom: 0.75rem;
+  color: #4A4A4A;
+  margin-bottom: 0.75rem;
 }
-
 
 /* Projects */
 .project-list {
   display: grid;
-  gap: 3rem; /* More space between projects */
+  gap: 3rem;
 }
 .project {
-  border-bottom: 1px solid #E0E5D7; /* Consistent subtle border */
-  padding-bottom: 2rem; /* More padding below content before border */
+  border-bottom: 1px solid #E0E5D7;
+  padding-bottom: 2rem;
 }
 .project:last-child {
-  border-bottom: none; /* No border on last project */
+  border-bottom: none;
 }
-
-/* Projects */
 .project .description {
   font-style: italic;
-  margin-bottom: 1.5rem; /* Adjusted margin */
-  color: #5A605A; /* Softer gray for descriptions */
+  margin-bottom: 1.5rem;
+  color: #5A605A;
 }
 
-/* General button styling (if you add buttons later) */
+/* Buttons */
 .btn {
-    display: inline-block;
-    padding: 0.8rem 1.8rem;
-    background-color: #2A5A4A; /* Deep Teal/Emerald */
-    color: #FDFCF7;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background-color: #2A5A4A;
+  color: #FDFCF7;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .btn:hover {
-    background-color: #6C9981; /* Muted Sage Green on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background-color: #6C9981;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-    main {
-        padding: 1.5rem;
-        margin: 1rem auto;
-    }
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.8rem; }
-    h3 { font-size: 1.4rem; }
-    nav ul { gap: 1rem; }
-    nav a { font-size: 0.95rem; }
-    .post-list li { margin-bottom: 2rem; padding-bottom: 1.5rem; }
-    .project-list { gap: 2rem; }
-    .project { padding-bottom: 1.5rem; }
+  main {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.4rem; }
+  nav ul { gap: 1rem; }
+  nav a { font-size: 0.95rem; }
+  .post-list li { margin-bottom: 2rem; padding-bottom: 1.5rem; }
+  .project-list { gap: 2rem; }
+  .project { padding-bottom: 1.5rem; }
 }
 
 @media screen and (max-width: 600px) {
   .project-list {
-    grid-template-columns: 1fr; /* Stack projects vertically on smaller screens */
+    grid-template-columns: 1fr;
   }
   nav ul { flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
   nav a { padding: 0.3rem 0.5rem; }
 }
 
 @media screen and (max-width: 480px) {
-    body { padding-top: 50px; }
-    nav { padding: 0.8rem 1rem; }
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
-    main { padding: 1rem; margin: 1rem 0.5rem; }
+  body { padding-top: 50px; }
+  nav { padding: 0.8rem 1rem; }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  main { padding: 1rem; margin: 1rem 0.5rem; }
 }
 
-/* --------- NAV BAR --------- */
+/* --------- NAV BAR (second chunk) --------- */
 nav {
-  background-color: #b9c2d9ff; /* periwinkle blue */
+  background-color: #b9c2d9ff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -248,40 +246,34 @@ nav {
   font-size: 1.8rem;
   font-weight: 500;
 }
-
 nav a {
   color: white;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
+nav a:hover { opacity: 0.8; }
 
-nav a:hover {
-  opacity: 0.8;
-}
-
-/* --------- LANDING PAGE LAYOUT --------- */
+/* --------- LANDING PAGE --------- */
 .landing-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 3rem;
   padding: 3rem 6rem;
-  background-color: #CCD7D5; /* soft background */
-  min-height: calc(100vh - 80px); /* fill viewport minus nav */
+  background-color: #CCD7D5;
+  min-height: calc(100vh - 80px);
 }
 
 .landing-left {
   flex: 1;
   text-align: center;
 }
-
 .fig-img {
   max-width: 400px;
   height: auto;
 }
-
 .fig-caption {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-style: italic;
   color: #555;
   margin-top: 0.3rem;
@@ -291,28 +283,27 @@ nav a:hover {
   flex: 2;
   max-width: 700px;
 }
-
 .landing-right h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
-
 .landing-right h2 {
+  font-size: 2.2rem;
   margin-top: 2rem;
+  margin-bottom: 1rem;
   color: #1a1a40;
 }
 
 .intro-text {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
 }
-
 .intro-list {
   margin: 1rem 0 2rem 1.2rem;
 }
-
 .footnote {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #666;
   margin-bottom: 2rem;
 }
