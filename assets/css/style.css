@@ -236,3 +236,87 @@ a:hover {
     h2 { font-size: 1.5rem; }
     main { padding: 1rem; margin: 1rem 0.5rem; }
 }
+
+/* --------- NAV BAR --------- */
+nav {
+  background-color: #b9aedc; /* lavender */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* --------- LANDING PAGE LAYOUT --------- */
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 3rem 6rem;
+  background-color: #e8f0f0; /* soft background */
+  min-height: calc(100vh - 80px); /* fill viewport minus nav */
+}
+
+.landing-left {
+  flex: 1;
+  text-align: center;
+}
+
+.fig-img {
+  max-width: 250px;
+  height: auto;
+}
+
+.fig-caption {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+.landing-right {
+  flex: 2;
+  max-width: 700px;
+}
+
+.landing-right h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.landing-right h2 {
+  margin-top: 2rem;
+  color: #1a1a40;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro-list {
+  margin: 1rem 0 2rem 1.2rem;
+}
+
+.footnote {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.blog-preview {
+  margin-bottom: 1.5rem;
+}
