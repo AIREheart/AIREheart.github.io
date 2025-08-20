@@ -12,10 +12,10 @@ img {
 }
 
 body {
-  font-family: "Inter", system-ui, sans-serif; /* Inter for body text */
+  font-family: "Lora", system-ui, sans-serif; /* Lora for body text */
   line-height: 1.7; /* Slightly more spacious line height */
-  color: #949fcf; /* Dark Forest Green/Charcoal for main text */
-  background: #ccd7d5; /* Soft Cream/Off-White background */
+  color: #FFFFFF; /* white for main text */
+  background: #ccd7d5; /* Soft green/grey eucalpytus background */
   padding-top: 60px; /* space for fixed nav */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; /* For better font rendering */
@@ -23,7 +23,7 @@ body {
 
 /* Headings - Using Merriweather for a more distinct feel */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Merriweather", serif; /* Merriweather for headings */
+    font-family: "Lora", serif; /* Lora for headings */
     color: #072669; /* Deep Teal/Emerald for headings */
     line-height: 1.2;
     margin-top: 1.5em; /* Add some top margin for spacing */
@@ -41,7 +41,7 @@ nav {
   top: 0;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
-  background-color: #b9c2d9; /* Deep Teal/Emerald */
+  background-color: #b9c2d9; /* Lilac nav br */
   padding: 1rem 2rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More pronounced, soft shadow */
   z-index: 100; /* Ensure navbar stays on top */
@@ -98,7 +98,7 @@ footer {
   text-align: center;
   margin-top: 5rem; /* More space before footer */
   padding: 2.5rem; /* Increased padding */
-  background-color: #180947; /* Deep Teal/Emerald */
+  background-color: #180947; /* Royal blue footer */
   color: #FDFCF7; /* Creamy white text */
   font-size: 0.95rem;
   border-top: none; /* Removed border, integrated with background color */
