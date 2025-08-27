@@ -10,7 +10,7 @@ title: Home
   </div>
 
   <div class="landing-right">
-    <h1>Hi there – would you like a <a href="https://www.whatshouldireadnext.com/quotes/sylvia-plath-i-saw-my-life-branching">fig</a>?</h1>
+    <h1>Hi there – pick a fig, any <a href="https://www.whatshouldireadnext.com/quotes/sylvia-plath-i-saw-my-life-branching">fig</a>?</h1>
     <p class="intro-text">
       Here’s a rooting place for where my mind wanders, where thoughts take shape
       and where I’ll share my curious exploration across various domains.
