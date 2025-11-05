@@ -36,4 +36,5 @@ This is a living space, meant to grow and change. Welcome.
 
 ---
 
+
 *"In every walk with nature one receives far more than he seeks."* — John Muir

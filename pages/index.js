@@ -28,7 +28,7 @@ export default function Home() {
             color: '#d4af37',
             animation: 'fadeIn 1.2s ease-out'
           }}>
-            Your Name
+            Allegory
           </h1>
           
           {/* Subtitle */}
@@ -65,9 +65,9 @@ export default function Home() {
             animation: 'fadeIn 1.2s ease-out 0.9s backwards'
           }}>
             {[
-              { href: '/about', label: 'About Me', color: '#d4af37' },
-              { href: '/chronicles', label: 'Chronicles', color: '#800020' },
-              { href: '/projects', label: 'Projects', color: '#c0c0c0' }
+              { href: '/about', label: 'About Me', color: '#b8b396ff' },
+              { href: '/chronicles', label: 'Chronicles', color: '#b8b396ff' },
+              { href: '/projects', label: 'Projects', color: '#b8b396ff' }
             ].map(btn => (
               <a 
                 key={btn.href}

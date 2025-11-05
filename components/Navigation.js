@@ -49,7 +49,7 @@ export default function Navigation() {
             onMouseOver={(e) => e.target.style.color = '#cd7f32'}
             onMouseOut={(e) => e.target.style.color = '#d4af37'}
           >
-            YN
+            Allegory
           </Link>
           
           {/* Desktop Navigation - KEY FIX: Added proper gap */}

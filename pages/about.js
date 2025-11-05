@@ -8,9 +8,11 @@ export default function About() {
         
         <div className="prose-custom space-y-6">
           <p className="text-xl leading-relaxed">
+            Biochemist by training with over 4 years spanning R&D in academia, government and vaccine biotech
+            
             A biochemist by training, I've found myself drawn to the elegant mathematics underlying 
-            biological systems. My journey from pipettes to Python has been one of discovery—finding 
-            that computational tools don't replace wet lab intuition, they amplify it.
+            biological systems. My journey from pipettes to Python has been one of discovery and finding 
+            that computational tools don't replace wet lab intuition but amplify it.
           </p>
           
           <h2 className="text-3xl font-serif mt-12 mb-4 text-bronze">Background</h2>
