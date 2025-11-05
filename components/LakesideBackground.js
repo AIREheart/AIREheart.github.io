@@ -7,10 +7,10 @@ function Stars() {
   
   const stars = useMemo(() => {
     const temp = []
-    for (let i = 0; i < 1500; i++) {
-      const x = (Math.random() - 0.5) * 150
-      const y = Math.random() * 60 + 10
-      const z = (Math.random() - 0.5) * 150
+    for (let i = 0; i < 2000; i++) {
+      const x = (Math.random() - 0.5) * 200
+      const y = Math.random() * 80
+      const z = (Math.random() - 0.5) * 200
       temp.push(x, y, z)
     }
     return new Float32Array(temp)
@@ -18,7 +18,7 @@ function Stars() {
   
   useFrame((state) => {
     if (starsRef.current) {
-      starsRef.current.rotation.y = state.clock.elapsedTime * 0.005
+      starsRef.current.rotation.y = state.clock.elapsedTime * 0.003
     }
   })
   
@@ -33,10 +33,10 @@ function Stars() {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.15}
+        size={0.12}
         color="#e8f1f5"
         transparent
-        opacity={0.8}
+        opacity={0.7}
         sizeAttenuation
       />
     </points>
@@ -45,12 +45,12 @@ function Stars() {
 
 function Moon() {
   return (
-    <group position={[20, 25, -40]}>
+    <group position={[30, 35, -50]}>
       <mesh>
-        <sphereGeometry args={[4, 32, 32]} />
+        <sphereGeometry args={[5, 32, 32]} />
         <meshBasicMaterial color="#f5f5dc" />
       </mesh>
-      <pointLight color="#e8f1f5" intensity={0.3} distance={80} />
+      <pointLight color="#e8f1f5" intensity={0.2} distance={100} />
     </group>
   )
 }
@@ -68,7 +68,7 @@ function Lake() {
     return new THREE.ShaderMaterial({
       uniforms: {
         time: { value: 0 },
-        color: { value: new THREE.Color('#0d1b2a') },
+        color: { value: new THREE.Color('#0a1a2e') },
       },
       vertexShader: `
         uniform float time;
@@ -79,10 +79,9 @@ function Lake() {
           vUv = uv;
           vec3 pos = position;
           
-          // Gentle waves
-          float wave1 = sin(pos.x * 0.3 + time * 0.2) * 0.2;
-          float wave2 = sin(pos.z * 0.2 + time * 0.15) * 0.15;
-          float wave3 = sin((pos.x + pos.z) * 0.1 + time * 0.1) * 0.1;
+          float wave1 = sin(pos.x * 0.25 + time * 0.18) * 0.25;
+          float wave2 = sin(pos.z * 0.18 + time * 0.12) * 0.18;
+          float wave3 = sin((pos.x + pos.z) * 0.08 + time * 0.08) * 0.12;
           pos.y += wave1 + wave2 + wave3;
           
           vElevation = pos.y;
@@ -97,24 +96,23 @@ function Lake() {
         void main() {
           vec3 finalColor = color;
           
-          // Subtle shimmer
-          float shimmer = vElevation * 0.2 + 0.8;
+          float shimmer = vElevation * 0.15 + 0.85;
           finalColor *= shimmer;
           
-          // Moonlight reflection on water
-          float reflection = smoothstep(0.3, 0.7, vUv.x) * 0.25;
-          finalColor += vec3(reflection * 0.4, reflection * 0.4, reflection * 0.3);
+          float reflection = smoothstep(0.25, 0.75, vUv.x) * 0.2;
+          finalColor += vec3(reflection * 0.3);
           
-          gl_FragColor = vec4(finalColor, 0.95);
+          gl_FragColor = vec4(finalColor, 1.0);
         }
       `,
-      transparent: true,
+      transparent: false,
     })
   }, [])
   
+  // Moved lake DOWN so it's at the bottom of viewport
   return (
-    <mesh ref={waterRef} rotation={[-Math.PI / 2, 0, 0]} position={[0, -15, 0]}>
-      <planeGeometry args={[200, 200, 80, 80]} />
+    <mesh ref={waterRef} rotation={[-Math.PI / 2, 0, 0]} position={[0, -25, 10]}>
+      <planeGeometry args={[250, 250, 90, 90]} />
       <primitive object={waterMaterial} attach="material" />
     </mesh>
   )
@@ -125,44 +123,42 @@ function Swan() {
   
   useFrame((state) => {
     if (swanRef.current) {
-      swanRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.4) * 0.4 - 12
-      swanRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.15) * 0.15 + Math.PI / 4
+      swanRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.35) * 0.5 - 20
+      swanRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.12) * 0.2 + Math.PI / 3
     }
   })
   
+  // Moved swan DOWN with the lake
   return (
-    <group ref={swanRef} position={[15, -12, -5]}>
-      {/* Body */}
+    <group ref={swanRef} position={[20, -20, 15]}>
       <mesh position={[0, 0, 0]}>
-        <sphereGeometry args={[1.2, 20, 20]} />
+        <sphereGeometry args={[1.5, 24, 24]} />
         <meshStandardMaterial 
-          color="#f0f0f0" 
-          opacity={0.5} 
+          color="#ffffff" 
+          opacity={0.6} 
           transparent 
-          emissive="#ffffff"
-          emissiveIntensity={0.2}
+          emissive="#e8f1f5"
+          emissiveIntensity={0.3}
         />
       </mesh>
-      {/* Neck */}
-      <mesh position={[0.7, 0.7, 0]} rotation={[0, 0, Math.PI / 5]}>
-        <cylinderGeometry args={[0.2, 0.3, 1.8, 12]} />
+      <mesh position={[0.9, 0.9, 0]} rotation={[0, 0, Math.PI / 4.5]}>
+        <cylinderGeometry args={[0.25, 0.35, 2.2, 16]} />
         <meshStandardMaterial 
-          color="#f0f0f0" 
-          opacity={0.5} 
+          color="#ffffff" 
+          opacity={0.6} 
           transparent
-          emissive="#ffffff"
-          emissiveIntensity={0.2}
+          emissive="#e8f1f5"
+          emissiveIntensity={0.3}
         />
       </mesh>
-      {/* Head */}
-      <mesh position={[1.3, 1.7, 0]}>
-        <sphereGeometry args={[0.35, 20, 20]} />
+      <mesh position={[1.6, 2.1, 0]}>
+        <sphereGeometry args={[0.4, 24, 24]} />
         <meshStandardMaterial 
-          color="#f0f0f0" 
-          opacity={0.5} 
+          color="#ffffff" 
+          opacity={0.6} 
           transparent
-          emissive="#ffffff"
-          emissiveIntensity={0.2}
+          emissive="#e8f1f5"
+          emissiveIntensity={0.3}
         />
       </mesh>
     </group>
@@ -171,20 +167,23 @@ function Swan() {
 
 export default function LakesideBackground() {
   return (
-    <div className="w-full h-full">
+    <div style={{ width: '100%', height: '100%' }}>
       <Canvas 
-        camera={{ position: [0, 8, 30], fov: 65 }}
-        gl={{ alpha: true, antialias: true }}
+        camera={{ 
+          position: [0, 0, 35],  // Moved camera FORWARD and centered
+          fov: 70 
+        }}
+        gl={{ alpha: false, antialias: true }}
       >
         <color attach="background" args={['#0a1128']} />
-        <fog attach="fog" args={['#0a1128', 20, 100]} />
+        <fog attach="fog" args={['#0a1128', 30, 120]} />
         
         <Stars />
         <Moon />
         <Lake />
         <Swan />
         
-        <ambientLight intensity={0.15} />
+        <ambientLight intensity={0.12} />
       </Canvas>
     </div>
   )

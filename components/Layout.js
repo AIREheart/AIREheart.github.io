@@ -10,24 +10,48 @@ export default function Layout({ children, title = 'Your Name' }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       
-      {/* Three.js background - fixed position, behind everything */}
-      <div className="fixed inset-0 z-0">
+      {/* LAYER 1: Three.js Background - Absolutely positioned, lowest z-index */}
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 0,
+        pointerEvents: 'none'
+      }}>
         <LakesideBackground />
       </div>
       
-      {/* Main content - positioned above background */}
-      <div className="relative z-10 min-h-screen flex flex-col">
+      {/* LAYER 2: Content - Higher z-index, allows interaction */}
+      <div style={{
+        position: 'relative',
+        zIndex: 1,
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column'
+      }}>
         <Navigation />
         
-        <main className="flex-grow">
+        <main style={{ flex: 1 }}>
           {children}
         </main>
         
-        <footer className="border-t border-moonlight/10 mt-20 bg-midnight/50 backdrop-blur-sm">
-          <div className="container mx-auto px-4 py-8 text-center text-moonlight/50">
-            <p className="font-serif">
-              © {new Date().getFullYear()} • Built with curiosity and code
-            </p>
+        <footer style={{
+          borderTop: '1px solid rgba(232, 241, 245, 0.1)',
+          marginTop: '5rem',
+          backgroundColor: 'rgba(10, 17, 40, 0.5)',
+          backdropFilter: 'blur(10px)'
+        }}>
+          <div style={{
+            maxWidth: '1200px',
+            margin: '0 auto',
+            padding: '2rem 1rem',
+            textAlign: 'center',
+            color: 'rgba(232, 241, 245, 0.5)',
+            fontFamily: "'Crimson Text', Georgia, serif"
+          }}>
+            <p>© {new Date().getFullYear()} • Built with curiosity and code</p>
           </div>
         </footer>
       </div>

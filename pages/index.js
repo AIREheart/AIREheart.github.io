@@ -3,44 +3,101 @@ import Layout from '../components/Layout'
 export default function Home() {
   return (
     <Layout title="Home">
-      <div className="min-h-screen flex items-center justify-center px-6 py-20">
-        <div className="text-center max-w-5xl">
-          {/* Main heading with animation */}
-          <h1 className="text-7xl md:text-9xl font-serif font-bold mb-8 text-gold animate-fade-in">
+      <div style={{
+        minHeight: 'calc(100vh - 80px)',  // Account for nav height
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '5rem 1.5rem'
+      }}>
+        <div style={{
+          textAlign: 'center',
+          maxWidth: '1100px',
+          backgroundColor: 'rgba(10, 17, 40, 0.4)',  // Semi-transparent backdrop
+          backdropFilter: 'blur(8px)',
+          padding: '4rem 3rem',
+          borderRadius: '1rem',
+          border: '1px solid rgba(212, 175, 55, 0.2)'
+        }}>
+          {/* Main heading */}
+          <h1 style={{
+            fontSize: 'clamp(3rem, 10vw, 7rem)',
+            fontFamily: "'Crimson Text', Georgia, serif",
+            fontWeight: 'bold',
+            marginBottom: '2rem',
+            color: '#d4af37',
+            animation: 'fadeIn 1.2s ease-out'
+          }}>
             Your Name
           </h1>
           
           {/* Subtitle */}
-          <p className="text-2xl md:text-4xl text-moonlight/90 font-serif mb-12 animate-fade-in-delay leading-relaxed">
+          <p style={{
+            fontSize: 'clamp(1.25rem, 4vw, 2.5rem)',
+            color: 'rgba(232, 241, 245, 0.9)',
+            fontFamily: "'Crimson Text', Georgia, serif",
+            marginBottom: '3rem',
+            animation: 'fadeIn 1.2s ease-out 0.3s backwards',
+            lineHeight: '1.5'
+          }}>
             Biochemist → Computational Biologist
           </p>
           
           {/* Description */}
-          <p className="text-lg md:text-2xl text-moonlight/80 max-w-3xl mx-auto leading-relaxed mb-16 animate-fade-in-delay-2">
+          <p style={{
+            fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
+            color: 'rgba(232, 241, 245, 0.8)',
+            maxWidth: '900px',
+            margin: '0 auto 3rem',
+            lineHeight: '1.75',
+            animation: 'fadeIn 1.2s ease-out 0.6s backwards'
+          }}>
             Exploring the intersection of wet lab intuition and computational discovery. 
             Chronicles of transformation, philosophy in algorithms, and the poetry of protein folding.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex gap-6 justify-center flex-wrap animate-fade-in-delay-3">
-            <a 
-              href="/about" 
-              className="px-10 py-4 bg-gold/10 border-2 border-gold hover:bg-gold/20 hover:scale-105 transition-all duration-300 rounded-lg text-gold font-semibold text-lg shadow-lg hover:shadow-gold/20"
-            >
-              About Me
-            </a>
-            <a 
-              href="/chronicles" 
-              className="px-10 py-4 bg-maroon/10 border-2 border-maroon hover:bg-maroon/20 hover:scale-105 transition-all duration-300 rounded-lg text-maroon font-semibold text-lg shadow-lg hover:shadow-maroon/20"
-            >
-              Chronicles
-            </a>
-            <a 
-              href="/projects" 
-              className="px-10 py-4 bg-silver/10 border-2 border-silver hover:bg-silver/20 hover:scale-105 transition-all duration-300 rounded-lg text-silver font-semibold text-lg shadow-lg hover:shadow-silver/20"
-            >
-              Projects
-            </a>
+          <div style={{
+            display: 'flex',
+            gap: '1.5rem',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            animation: 'fadeIn 1.2s ease-out 0.9s backwards'
+          }}>
+            {[
+              { href: '/about', label: 'About Me', color: '#d4af37' },
+              { href: '/chronicles', label: 'Chronicles', color: '#800020' },
+              { href: '/projects', label: 'Projects', color: '#c0c0c0' }
+            ].map(btn => (
+              <a 
+                key={btn.href}
+                href={btn.href}
+                style={{
+                  padding: '1rem 2.5rem',
+                  backgroundColor: `${btn.color}15`,
+                  border: `2px solid ${btn.color}`,
+                  color: btn.color,
+                  textDecoration: 'none',
+                  borderRadius: '0.5rem',
+                  fontWeight: '600',
+                  fontSize: '1.125rem',
+                  transition: 'all 0.3s',
+                  boxShadow: `0 4px 12px ${btn.color}10`
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor = `${btn.color}30`
+                  e.target.style.transform = 'scale(1.05) translateY(-2px)'
+                  e.target.style.boxShadow = `0 8px 20px ${btn.color}30`
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor = `${btn.color}15`
+                  e.target.style.transform = 'scale(1) translateY(0)'
+                  e.target.style.boxShadow = `0 4px 12px ${btn.color}10`
+                }}
+              >
+                {btn.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -55,25 +112,6 @@ export default function Home() {
             opacity: 1;
             transform: translateY(0);
           }
-        }
-        
-        .animate-fade-in {
-          animation: fadeIn 1.2s ease-out;
-        }
-        
-        .animate-fade-in-delay {
-          opacity: 0;
-          animation: fadeIn 1.2s ease-out 0.3s forwards;
-        }
-        
-        .animate-fade-in-delay-2 {
-          opacity: 0;
-          animation: fadeIn 1.2s ease-out 0.6s forwards;
-        }
-        
-        .animate-fade-in-delay-3 {
-          opacity: 0;
-          animation: fadeIn 1.2s ease-out 0.9s forwards;
         }
       `}</style>
     </Layout>
