@@ -55,6 +55,32 @@ export default function Home() {
             Exploring the intersection of wet lab intuition and computational discovery. 
             Chronicles of transformation, philosophy in algorithms, and the poetry of protein folding.
           </p>
+
+
+
+          {/* new rando paragraph */}
+          <p style={{
+            fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
+            color: 'rgba(232, 241, 245, 0.8)',
+            maxWidth: '900px',
+            margin: '0 auto 3rem',
+            lineHeight: '1.75',
+            animation: 'fadeIn 1.2s ease-out 0.6s backwards'
+          }}>
+            Decided to ramble more to see what happens.
+            You shall not tell lies. You shall not tell lies.
+            Decided to ramble more to see what happens.
+            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
+            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
+            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
+            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
+            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
+            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
+            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
+            You shall not tell lies. You shall not tell lies.s
+          </p>
+
+
           
           {/* CTA Buttons */}
           <div style={{
