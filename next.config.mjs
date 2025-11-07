@@ -1,3 +1,4 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -5,6 +6,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Update this with your GitHub repo name
-  basePath: process.env.NODE_ENV === 'production' ? '' : '',
+  // Leave basePath empty for user/org pages (aireheart.github.io)
+  basePath: '',
+  // For user/org pages, leave assetPrefix empty
+  assetPrefix: '',
 }
+
+module.exports = nextConfig

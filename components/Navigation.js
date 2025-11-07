@@ -3,12 +3,12 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/chronicles', label: 'Chronicles' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/research', label: 'Research' },
-  { href: '/bookshelf', label: 'Bookshelf' },
+  { href: '/', label: '🌓 Home' },
+  { href: '/about', label: '🏛️ About' },
+  { href: '/chronicles', label: '🖋️ Chronicles' },
+  { href: '/projects', label: '🛠️ Projects' },
+  { href: '/research', label: '🧫 Research' },
+  { href: '/bookshelf', label: '📚 Bookshelf' },
 ]
 
 export default function Navigation() {

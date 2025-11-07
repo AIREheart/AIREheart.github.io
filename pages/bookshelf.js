@@ -48,7 +48,7 @@ export default function Bookshelf() {
             marginBottom: '1rem',
             lineHeight: '1.1'
           }}>
-            Digital Library
+            Aaisha's Digital Library
           </h1>
           <p style={{
             fontSize: 'clamp(1.125rem, 2.5vw, 1.5rem)',
@@ -72,7 +72,7 @@ export default function Bookshelf() {
             onMouseEnter={(e) => e.target.style.color = '#d4af37'}
             onMouseLeave={(e) => e.target.style.color = '#cd7f32'}
           >
-            View on Goodreads →
+            View more on Goodreads →
           </a>
         </header>
 
