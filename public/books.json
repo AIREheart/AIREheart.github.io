@@ -1,0 +1,80 @@
+[
+  {
+    "title": "A Thousand Splendid Suns",
+    "author": "Khaled Hosseini",
+    "cover": "/assets/images/atss.jpg",
+    "review": "Reviewed this one at 3 am upon promptly finishing in a single setting. Yes, I was a wreck."
+  },
+  {
+    "title": "Beartown",
+    "author": "Fredrik Backman",
+    "cover": "/assets/images/beartown.jpg",
+    "review": "Nostalgia has led me places I wouldn't even go with a gun."
+  },
+  {
+    "title": "Bluestar's Prophecy",
+    "author": "Erin Hunter",
+    "cover": "/assets/images/bluestar.jpg",
+    "review": "The title-holder for favorite book of all time since the age of 8."
+  },
+  {
+    "title": "Circe",
+    "author": "Madeline Miller",
+    "cover": "/assets/images/circe.jpg",
+    "review": "I liked this book so much I went and bought it. So, yeah."
+  },
+  {
+    "title": "Herland",
+    "author": "Charlotte Perkins Gilman",
+    "cover": "/assets/images/herland.jpg",
+    "review": "Some notes."
+  },
+  {
+    "title": "I Who Have Never Known Men",
+    "author": "Jacqueline Harpman",
+    "cover": "/assets/images/iwhnkm.jpg",
+    "review": "No notes."
+  },
+  {
+    "title": "Lapvona",
+    "author": "Ottessa Moshfegh",
+    "cover": "/assets/images/lapvona.jpg",
+    "review": "A most macabre, borderline-Shakespearean affair. Moshfegh unleashes a fiefdom of bleak fury that settles into the pit of your stomach."
+  },
+  {
+    "title": "On Earth We're Briefly Gorgeous",
+    "author": "Ocean Vuong",
+    "cover": "/assets/images/onearth.jpg",
+    "review": "A phantom novel indeed."
+  },
+  {
+    "title": "Pachinko",
+    "author": "Min Jin Lee",
+    "cover": "/assets/images/pachinko.jpg",
+    "review": "Beautiful prose, a story that transports across generations and lifetimes."
+  },
+  {
+    "title": "Sunrise on the Reaping",
+    "author": "Suzanne Collins",
+    "cover": "/assets/images/sotr.jpg",
+    "review": "Ms. Suzanne Collins did not come to play with her dystopian (historical) fiction x Edgar Allen Poe crossover."
+  },
+  {
+    "title": "Tender Is the Flesh",
+    "author": "Agustina Bazterrica",
+    "cover": "/assets/images/tender.jpg",
+    "review": "No appetite (what the helly)."
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "cover": "/assets/images/greatgatsby.jpg",
+    "review": "⭐️⭐️⭐️ bc does nobody actually get over anything?"
+  },
+  {
+    "title": "The Just City",
+    "author": "Jo Walton",
+    "cover": "/assets/images/justcity.jpg",
+    "review": "A Socratic approach to ethics in the era just preceeding AI cats."
+  }
+]
