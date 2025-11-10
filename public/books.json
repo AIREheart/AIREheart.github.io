@@ -39,7 +39,7 @@
     "title": "Lapvona",
     "author": "Ottessa Moshfegh",
     "cover": "/assets/images/lapvona.jpg",
-    "review": "A most macabre, borderline-Shakespearean affair. Moshfegh unleashes a fiefdom of bleak fury that settles into the pit of your stomach."
+    "review": "A most macabre borderline-Shakespearean affair. Moshfegh unleashes a fiefdom of bleak fury that settles into the pit of your stomach."
   },
   {
     "title": "On Earth We're Briefly Gorgeous",
@@ -76,5 +76,17 @@
     "author": "Jo Walton",
     "cover": "/assets/images/justcity.jpg",
     "review": "A Socratic approach to ethics in the era just preceeding AI cats."
+  },
+  {
+    "title": "The You You Are",
+    "author": "Ricken Lazlo Hale",
+    "cover": "/assets/images/tyya.jpg",
+    "review": "The people yearn to embark on brave journeys guided by the ancient tomes."
+  },
+  {
+    "title": "Three Day Road",
+    "author": "Joseph Boyden",
+    "cover": "/assets/images/threedayroad.jpg",
+    "review": ""
   }
 ]

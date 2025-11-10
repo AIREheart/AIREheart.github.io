@@ -1,5 +1,5 @@
 ---
-title: The You You Are:
+title: The You You Are
 author: Ricken Lazlo Hale
 cover: /assets/images/tyya.jpg
 ---
