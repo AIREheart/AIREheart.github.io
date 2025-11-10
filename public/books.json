@@ -24,6 +24,12 @@
     "review": "I liked this book so much I went and bought it. So, yeah."
   },
   {
+    "title": "Frankenstein, or, The Modern Prometheus",
+    "author": "Mary Shelley",
+    "cover": "/assets/images/frankenstein.jpg",
+    "review": ""
+  },
+  {
     "title": "Herland",
     "author": "Charlotte Perkins Gilman",
     "cover": "/assets/images/herland.jpg",
@@ -36,10 +42,40 @@
     "review": "No notes."
   },
   {
+    "title": "Kafka on the Shore",
+    "author": "Haruki Murakami",
+    "cover": "/assets/images/kafkaonshore.jpg",
+    "review": ""
+  },
+  {
     "title": "Lapvona",
     "author": "Ottessa Moshfegh",
     "cover": "/assets/images/lapvona.jpg",
     "review": "A most macabre borderline-Shakespearean affair. Moshfegh unleashes a fiefdom of bleak fury that settles into the pit of your stomach."
+  },
+  {
+    "title": "Mickey7",
+    "author": "Edward Ashton",
+    "cover": "/assets/images/mickey7.jpg",
+    "review": ""
+  },
+  {
+    "title": "No Longer Human",
+    "author": "Osamu Dazai",
+    "cover": "/assets/images/nolongerhuman.jpg",
+    "review": ""
+  },
+  {
+    "title": "Norwegian Wood",
+    "author": "Haruki Murakami",
+    "cover": "/assets/images/norwood.jpg",
+    "review": ""
+  },
+  {
+    "title": "Of Mice and Men",
+    "author": "John Steinbeck",
+    "cover": "/assets/images/ofmiceandmen.jpg",
+    "review": ""
   },
   {
     "title": "On Earth We're Briefly Gorgeous",
@@ -48,10 +84,22 @@
     "review": "A phantom novel indeed."
   },
   {
+    "title": "On Tyranny",
+    "author": "Timothy D. Snyder",
+    "cover": "/assets/images/ontyranny.jpg",
+    "review": ""
+  },
+  {
     "title": "Pachinko",
     "author": "Min Jin Lee",
     "cover": "/assets/images/pachinko.jpg",
     "review": "Beautiful prose, a story that transports across generations and lifetimes."
+  },
+  {
+    "title": "Song of Achilles",
+    "author": "Madeline Miller",
+    "cover": "/assets/images/songofachilles.jpg",
+    "review": ""
   },
   {
     "title": "Sunrise on the Reaping",
@@ -72,10 +120,22 @@
     "review": "⭐️⭐️⭐️ bc does nobody actually get over anything?"
   },
   {
+    "title": "The Invisible Life of Addie LaRue",
+    "author": "V. E. Schwab",
+    "cover": "/assets/images/addielarue.jpg",
+    "review": ""
+  },
+  {
     "title": "The Just City",
     "author": "Jo Walton",
     "cover": "/assets/images/justcity.jpg",
     "review": "A Socratic approach to ethics in the era just preceeding AI cats."
+  },
+  {
+    "title": "The Stranger",
+    "author": "Albert Camus",
+    "cover": "/assets/images/thestranger.jpg",
+    "review": ""
   },
   {
     "title": "The You You Are",
