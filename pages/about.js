@@ -22,7 +22,7 @@ export default function About() {
             marginBottom: '1.5rem',
             lineHeight: '1.1'
           }}>
-            About Me
+            About Me 🧬
           </h1>
           <p style={{
             fontSize: 'clamp(1.25rem, 3vw, 1.75rem)',
@@ -31,7 +31,7 @@ export default function About() {
             fontFamily: "'Crimson Text', Georgia, serif",
             fontStyle: 'italic'
           }}>
-            Biochemist by training with over 4 years spanning R&D in academia, government and vaccine biotech
+            Biochemist by training with over 4 years of R&D spanning genomics, structural biology, SynBio and vaccine stabilization 
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function About() {
               marginBottom: '1.5rem',
               letterSpacing: '-0.02em'
             }}>
-              Background
+              Background 
             </h2>
             <p style={{ marginBottom: '1.5rem' }}>
               With roots in biochemistry, I developed a deep appreciation for 
@@ -157,7 +157,7 @@ export default function About() {
               marginBottom: '1.5rem',
               letterSpacing: '-0.02em'
             }}>
-              Gallery of Joy {/* ///./pages/whimsy.js*/}
+               Gallery of Joy  🖼️ {/* ///./pages/whimsy.js*/}
             </h2>
             <p style={{ marginBottom: '1.5rem' }}>
               A curated collection of whimsy and sometimes artful discourse on a variety of matters.

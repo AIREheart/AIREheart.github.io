@@ -60,7 +60,7 @@ export default function Research() {
             marginBottom: '1.5rem',
             lineHeight: '1.1'
           }}>
-            Research
+            Research ⚗️
           </h1>
           <p style={{
             fontSize: 'clamp(1.125rem, 2.5vw, 1.5rem)',
