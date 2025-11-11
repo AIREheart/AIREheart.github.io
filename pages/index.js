@@ -28,7 +28,7 @@ export default function Home() {
             color: '#d4af37',
             animation: 'fadeIn 1.2s ease-out'
           }}>
-            Allegory
+            Allegory 🪶
           </h1>
           
           {/* Subtitle */}

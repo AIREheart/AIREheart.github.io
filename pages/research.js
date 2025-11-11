@@ -261,7 +261,7 @@ export default function Research() {
             flexWrap: 'wrap'
           }}>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:aaisha.ameen3@gmail.com"
               style={{
                 padding: '0.875rem 2rem',
                 backgroundColor: 'rgba(212, 175, 55, 0.1)',

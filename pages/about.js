@@ -64,7 +64,7 @@ export default function About() {
               Background
             </h2>
             <p style={{ marginBottom: '1.5rem' }}>
-              My path began in traditional biochemistry, where I developed a deep appreciation for 
+              With roots in biochemistry, I developed a deep appreciation for 
               molecular mechanisms. As I encountered increasingly complex biological questions, I 
               realized the computational approaches offered new lenses for understanding life at scale.
             </p>
@@ -96,7 +96,7 @@ export default function About() {
               margin: '2rem 0'
             }}>
               {[
-                'Machine learning models for biological sequence analysis',
+                'Machine learning models for biological analysis',
                 'Bioinformatics pipelines for multi-omics data',
                 'Protein structure prediction and design',
                 'Network analysis of biological systems'
@@ -142,7 +142,29 @@ export default function About() {
               knowledge and technical sophistication. Like Janus, we must look both ways—honoring 
               the biochemical reality while embracing computational abstraction.
             </p>
+            </div>
+
+            <div style={{
+            margin: '5rem 0',
+            borderLeft: '3px solid #cd7f32',
+            paddingLeft: '2rem'
+          }}>
+            <h2 style={{
+              fontSize: '2rem',
+              fontFamily: "'Crimson Text', Georgia, serif",
+              fontWeight: '600',
+              color: '#cd7f32',
+              marginBottom: '1.5rem',
+              letterSpacing: '-0.02em'
+            }}>
+              Gallery of Joy {/* ///./pages/whimsy.js*/}
+            </h2>
+            <p style={{ marginBottom: '1.5rem' }}>
+              A curated collection of whimsy and sometimes artful discourse on a variety of matters.
+            </p>
           </div>
+
+          
 
           {/* Pullquote - Editorial Style */}
           <blockquote style={{

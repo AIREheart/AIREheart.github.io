@@ -29,6 +29,28 @@ const projects = [
     year: '2023',
     link: '#',
   },
+  {
+    title: 'Bioclassifiers: A Suite of ML Models for Biology',
+    description:'Tinkering with various classifier models to explore fundamental ML concepts applied to biological datasets.',
+    tags: ['EDA (numpy, pandas, seaborn)','model training + evals'],
+    year: '2024 - present',
+    link: 'https://github.com/AIREheart/Replication-Station'
+  },
+  {
+    title: 'Engineering PETases @ The Align Foundation',
+    description: 'Predicting and generating novel PETase enzyme properties for enhanced plastic degradtion via computational and ML models.',
+    tags: ['protein prediction', 'zero-shot & supervised learning', 'GNNs + reinforcement learning'],
+    year: '2025',
+    link: 'https://github.com/AIREheart/AlignBio2025',
+  },
+{
+    title: 'Solubility Express',
+    description: 'Senior thesis studying a parasitic metabolic enzyme as a therapeutic target via molecular biology and protein purification workflows.',
+    tags: ['bacterial transformations', 'induced protein expression', 'affinity + size-exclusion chromatography'],
+    year: '2023 - 2024',
+    link: 'https://drive.google.com/file/d/1oRnFtidRJDSv9lInBkskvvXGAs2-m25a/view',
+  }
+
 ]
 
 export default function Projects() {

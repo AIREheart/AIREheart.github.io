@@ -1,16 +1,19 @@
+// components/Layout.js
 import Head from 'next/head'
 import Navigation from './Navigation'
+import Footer from './Footer.js'
 import LakesideBackground from './LakesideBackground'
 
-export default function Layout({ children, title = 'Your Name' }) {
+export default function Layout({ children, title = 'Aaisha Ameen' }) {
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Computational biologist exploring the intersection of wet lab and algorithms" />
       </Head>
       
-      {/* LAYER 1: Three.js Background - Absolutely positioned, lowest z-index */}
+      {/* Three.js background - fixed position, behind everything */}
       <div style={{
         position: 'fixed',
         top: 0,
@@ -23,7 +26,7 @@ export default function Layout({ children, title = 'Your Name' }) {
         <LakesideBackground />
       </div>
       
-      {/* LAYER 2: Content - Higher z-index, allows interaction */}
+      {/* Main content - positioned above background */}
       <div style={{
         position: 'relative',
         zIndex: 1,
@@ -37,23 +40,7 @@ export default function Layout({ children, title = 'Your Name' }) {
           {children}
         </main>
         
-        <footer style={{
-          borderTop: '1px solid rgba(232, 241, 245, 0.1)',
-          marginTop: '5rem',
-          backgroundColor: 'rgba(10, 17, 40, 0.5)',
-          backdropFilter: 'blur(10px)'
-        }}>
-          <div style={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: '2rem 1rem',
-            textAlign: 'center',
-            color: 'rgba(232, 241, 245, 0.5)',
-            fontFamily: "'Crimson Text', Georgia, serif"
-          }}>
-            <p>© {new Date().getFullYear()} • Built with curiosity and code</p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   )
