@@ -182,7 +182,8 @@ export default function About() {
               lineHeight: '1.7',
               margin: 0
             }}>
-              "In every walk with nature, one receives far more than he seeks."
+              “There is something at work in my soul, which I do not understand.”
+
             </p>
             <footer style={{
               marginTop: '1rem',
@@ -190,7 +191,7 @@ export default function About() {
               color: 'rgba(232, 241, 245, 0.6)',
               fontStyle: 'normal'
             }}>
-              — John Muir
+              — Mary Shelley, <em>Frankenstein</em>
             </footer>
           </blockquote>
         </article>

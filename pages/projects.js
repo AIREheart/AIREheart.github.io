@@ -30,6 +30,13 @@ const projects = [
     link: '#',
   },
   {
+    title: 'Interpreting Protein Predictors',
+    description:'Probing model interpretability of protein structure representations from AlphaFold using modern methods such as LIME, SHAP and sparse feature discovery (inspired by Anthropic and OpenAI interpretability work).',
+    tags: ['interpretability metrics', 'feature attribution',],
+    year: '2024 - present',
+    link: ''
+  },
+  {
     title: 'Bioclassifiers: A Suite of ML Models for Biology',
     description:'Tinkering with various classifier models to explore fundamental ML concepts applied to biological datasets.',
     tags: ['EDA (numpy, pandas, seaborn)','model training + evals'],
