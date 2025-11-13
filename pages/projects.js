@@ -2,32 +2,11 @@ import Layout from '../components/Layout'
 
 const projects = [
   {
-    title: 'Protein Structure Predictor',
-    description: 'ML model for predicting protein folding patterns from sequence data using transformer architectures and attention mechanisms.',
-    tags: ['Python', 'PyTorch', 'Bioinformatics'],
-    year: '2024',
-    link: '#',
-  },
-  {
-    title: 'RNA-seq Pipeline',
-    description: 'Automated workflow for differential gene expression analysis with integrated quality control and visualization.',
-    tags: ['Python', 'Nextflow', 'Docker'],
-    year: '2024',
-    link: '#',
-  },
-  {
-    title: 'Interactive Metabolic Network',
-    description: 'D3.js visualization of pathway interactions enabling exploration of systems-level metabolic relationships.',
-    tags: ['JavaScript', 'D3.js', 'Systems Biology'],
-    year: '2023',
-    link: '#',
-  },
-  {
-    title: 'Multi-Omics Integration Tool',
-    description: 'Statistical framework for integrating transcriptomic, proteomic, and metabolomic datasets.',
-    tags: ['R', 'Python', 'Statistics'],
-    year: '2023',
-    link: '#',
+    title: 'Bioclassifiers: A Suite of ML Models for Biology',
+    description:'Tinkering with various classifier models to explore fundamental ML concepts applied to -omics-based approaches and biological datasets.',
+    tags: ['EDA (numpy, pandas, seaborn)','R', 'Python','model training + evals'],
+    year: '2024 - present',
+    link: 'https://github.com/AIREheart/Replication-Station'
   },
   {
     title: 'Interpreting Protein Predictors',
@@ -37,22 +16,15 @@ const projects = [
     link: ''
   },
   {
-    title: 'Bioclassifiers: A Suite of ML Models for Biology',
-    description:'Tinkering with various classifier models to explore fundamental ML concepts applied to biological datasets.',
-    tags: ['EDA (numpy, pandas, seaborn)','model training + evals'],
-    year: '2024 - present',
-    link: 'https://github.com/AIREheart/Replication-Station'
-  },
-  {
     title: 'Engineering PETases @ The Align Foundation',
-    description: 'Predicting and generating novel PETase enzyme properties for enhanced plastic degradtion via computational and ML models.',
+    description: 'Creating a benchark model capable of predicting and generating novel PETase enzyme properties for enhanced plastic degradtion via computational and ML models.',
     tags: ['protein prediction', 'zero-shot & supervised learning', 'GNNs + reinforcement learning'],
     year: '2025',
     link: 'https://github.com/AIREheart/AlignBio2025',
   },
 {
     title: 'Solubility Express',
-    description: 'Senior thesis studying a parasitic metabolic enzyme as a therapeutic target via molecular biology and protein purification workflows.',
+    description: 'Senior undergraduate thesis studying a parasitic metabolic enzyme as a therapeutic target via molecular biology and protein purification workflows.',
     tags: ['bacterial transformations', 'induced protein expression', 'affinity + size-exclusion chromatography'],
     year: '2023 - 2024',
     link: 'https://drive.google.com/file/d/1oRnFtidRJDSv9lInBkskvvXGAs2-m25a/view',
