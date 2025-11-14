@@ -13,7 +13,7 @@ const projects = [
     description:'Probing model interpretability of protein structure representations from AlphaFold using modern methods such as LIME, SHAP and sparse feature discovery (inspired by Anthropic and OpenAI interpretability work).',
     tags: ['interpretability metrics', 'feature attribution',],
     year: '2024 - present',
-    link: ''
+    link: 'https://github.com/AIREheart/AlphaInterp'
   },
   {
     title: 'Engineering PETases @ The Align Foundation',
@@ -21,6 +21,13 @@ const projects = [
     tags: ['protein prediction', 'zero-shot & supervised learning', 'GNNs + reinforcement learning'],
     year: '2025',
     link: 'https://github.com/AIREheart/AlignBio2025',
+  },
+  {
+    title: 'BERT Takes a BoW',
+    description: 'Exploring natural language processing models for clinical diagnosis of neurodegenerative diseases',
+    tags: ['ClinicalBERT',' & stratification techniques', 'text classification', 'Python', 'scikit-learn'],
+    year: '2024',
+    link: '',
   },
 {
     title: 'Solubility Express',
