@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import Link from 'next/link'
 
 export default function About() {
   return (
@@ -96,7 +97,9 @@ export default function About() {
               margin: '2rem 0'
             }}>
               {[
-                'Machine learning models for biological analysis',
+                'Convergence of data science and machine learning with biological analysis',
+                'Model Embryology & Interpretabiliy 🐣',
+                'AI alignment and ethics (model scope & scalability w.r.t. design, development and deployment)',
                 'Bioinformatics pipelines for multi-omics data',
                 'Protein structure prediction and design',
                 'Network analysis of biological systems'
@@ -153,14 +156,26 @@ export default function About() {
               fontSize: '2rem',
               fontFamily: "'Crimson Text', Georgia, serif",
               fontWeight: '600',
-              color: '#cd7f32',
+              color: '#6ac0f2ff',
               marginBottom: '1.5rem',
               letterSpacing: '-0.02em'
             }}>
-               Gallery of Joy  🖼️ {/* ///./pages/whimsy.js*/}
+      
+
+              Galleria {/* ///./pages/whimsy.js*/}
             </h2>
             <p style={{ marginBottom: '1.5rem' }}>
-              A curated collection of whimsy and sometimes artful discourse on a variety of matters.
+              Miscellaneous creative collections.
+            </p>
+            
+            <p>
+            <Link 
+            href="./castle-test" 
+            style={{ color: 'gba(232, 241, 245, 0.85)', textDecoration: 'underline dotted' }}
+            >
+            Castle 
+            </Link>
+             <break></break> 🏰 a three.js experiment
             </p>
           </div>
 
