@@ -1,10 +1,15 @@
 // components/Layout.js
+// This version properly supports custom backgrounds
+
 import Head from 'next/head'
 import Navigation from './Navigation'
-import Footer from './Footer.js'
+import Footer from './Footer'
 import LakesideBackground from './LakesideBackground'
 
-export default function Layout({ children, title = 'Aaisha Ameen' }) {
+export default function Layout({ children, title = 'Aaisha Ameen', backgroundComponent }) {
+  // Use custom background if provided, otherwise default to LakesideBackground
+  const Background = backgroundComponent || LakesideBackground
+  
   return (
     <>
       <Head>
@@ -23,7 +28,7 @@ export default function Layout({ children, title = 'Aaisha Ameen' }) {
         zIndex: 0,
         pointerEvents: 'none'
       }}>
-        <LakesideBackground />
+        <Background />
       </div>
       
       {/* Main content - positioned above background */}
