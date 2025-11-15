@@ -67,17 +67,8 @@ export default function Home() {
             lineHeight: '1.75',
             animation: 'fadeIn 1.2s ease-out 0.6s backwards'
           }}>
-            Decided to ramble more to see what happens.
-            You shall not tell lies. You shall not tell lies.
-            Decided to ramble more to see what happens.
-            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
-            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
-            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
-            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
-            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
-            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
-            You shall not tell lies. You shall not tell lies.Decided to ramble more to see what happens.
-            You shall not tell lies. You shall not tell lies.s
+            Spurned from wanting to plant my own digital garden, insert hyperlink: https://www.technologyreview.com/2020/09/03/1007716/digital-gardens-let-you-cultivate-your-own-little-bit-of-the-internet/
+            
           </p>
 
 
