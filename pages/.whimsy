@@ -6,3 +6,4 @@ import Layout from '../components/Layout'
 
 
 //Artful Whimsy
+//<Layout backgroundComponent={() => <div style={{background: 'linear-gradient(...)'}} />}>

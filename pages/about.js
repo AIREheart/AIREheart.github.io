@@ -177,6 +177,16 @@ export default function About() {
             </Link>
              <break></break> 🏰 a three.js experiment
             </p>
+
+            <p>
+            <Link 
+            href="./castle" 
+            style={{ color: 'gba(232, 241, 245, 0.85)', textDecoration: 'underline dotted' }}
+            >
+            Castle Page 
+            </Link>
+             <break></break> 🏰 a three.js experiment v2
+            </p>
           </div>
 
           
