@@ -1,12 +1,13 @@
 // components/three/CastleScene.js
-// COMPLETE WORKING FILE - Copy this exactly
+// FULLY INTERACTIVE VERSION with OrbitControls
 
-import { Canvas, useFrame } from '@react-three/fiber'
-import { useRef, useState, useMemo } from 'react'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import { useRef, useState, useMemo, useEffect } from 'react'
 import * as THREE from 'three'
 
-// Tower component
-function Tower({ position, height, radius, color, label, onClick }) {
+// Tower component with proper interactivity
+function Tower({ position, height, radius, color, label, onClick, onHoverChange }) {
   const [hovered, setHovered] = useState(false)
   const towerRef = useRef()
   const flagRef = useRef()
@@ -19,17 +20,38 @@ function Tower({ position, height, radius, color, label, onClick }) {
     if (hovered && towerRef.current) {
       const scale = 1 + Math.sin(state.clock.elapsedTime * 3) * 0.02
       towerRef.current.scale.setScalar(scale)
+    } else if (towerRef.current) {
+      towerRef.current.scale.setScalar(1)
     }
   })
+
+  const handlePointerOver = (e) => {
+    e.stopPropagation()
+    setHovered(true)
+    onHoverChange && onHoverChange(label, true)
+    document.body.style.cursor = 'pointer'
+  }
+
+  const handlePointerOut = (e) => {
+    e.stopPropagation()
+    setHovered(false)
+    onHoverChange && onHoverChange(label, false)
+    document.body.style.cursor = 'default'
+  }
+
+  const handleClick = (e) => {
+    e.stopPropagation()
+    onClick && onClick(label)
+  }
   
   return (
     <group position={position}>
-      {/* Main tower */}
+      {/* Main tower - MUST have onPointerOver/Out/Click */}
       <mesh
         ref={towerRef}
-        onPointerOver={() => setHovered(true)}
-        onPointerOut={() => setHovered(false)}
-        onClick={() => onClick && onClick(label)}
+        onPointerOver={handlePointerOver}
+        onPointerOut={handlePointerOut}
+        onClick={handleClick}
         castShadow
       >
         <cylinderGeometry args={[radius, radius * 1.2, height, 8]} />
@@ -117,16 +139,19 @@ function Tower({ position, height, radius, color, label, onClick }) {
         </group>
       ))}
       
-      {/* Floating label */}
+      {/* Floating label when hovered */}
       {hovered && (
-        <mesh position={[0, height / 2 + 5, 0]}>
-          <sphereGeometry args={[0.2, 16, 16]} />
-          <meshStandardMaterial
-            color={color}
-            emissive={color}
-            emissiveIntensity={0.5}
-          />
-        </mesh>
+        <group position={[0, height / 2 + 5, 0]}>
+          <mesh>
+            <sphereGeometry args={[0.2, 16, 16]} />
+            <meshStandardMaterial
+              color={color}
+              emissive={color}
+              emissiveIntensity={0.5}
+            />
+          </mesh>
+          {"Tower of"}
+        </group>
       )}
     </group>
   )
@@ -160,9 +185,10 @@ function Wall({ start, end, height }) {
   )
 }
 
-// Gate component
+// Gate component with interactive button
 function Gate({ position }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [buttonHovered, setButtonHovered] = useState(false)
   const gateRef = useRef()
   
   useFrame(() => {
@@ -197,16 +223,21 @@ function Gate({ position }) {
         />
       </mesh>
       
-      {/* Button to open gate */}
+      {/* Interactive button to open gate */}
       <mesh
         position={[0, 1, -3]}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={(e) => {
+          e.stopPropagation()
+          setIsOpen(!isOpen)
+        }}
         onPointerOver={(e) => {
-          e.object.material.emissiveIntensity = 0.5
+          e.stopPropagation()
+          setButtonHovered(true)
           document.body.style.cursor = 'pointer'
         }}
         onPointerOut={(e) => {
-          e.object.material.emissiveIntensity = 0
+          e.stopPropagation()
+          setButtonHovered(false)
           document.body.style.cursor = 'default'
         }}
       >
@@ -214,6 +245,7 @@ function Gate({ position }) {
         <meshStandardMaterial 
           color="#d4af37"
           emissive="#d4af37"
+          emissiveIntensity={buttonHovered ? 0.8 : 0.3}
           metalness={0.5}
           roughness={0.3}
         />
@@ -223,8 +255,20 @@ function Gate({ position }) {
 }
 
 // Main castle scene component
-function CastleContent() {
+function CastleContent({ onTowerInteraction }) {
   const [selectedTower, setSelectedTower] = useState(null)
+  const [hoveredTower, setHoveredTower] = useState(null)
+  
+  const handleTowerClick = (label) => {
+    setSelectedTower(label)
+    onTowerInteraction && onTowerInteraction(label, 'click')
+    console.log('Tower clicked:', label)
+  }
+
+  const handleTowerHover = (label, isHovering) => {
+    setHoveredTower(isHovering ? label : null)
+    onTowerInteraction && onTowerInteraction(label, isHovering ? 'hover' : 'unhover')
+  }
   
   const towers = useMemo(() => [
     {
@@ -252,6 +296,16 @@ function CastleContent() {
   
   return (
     <>
+      {/* KEY FIX: Add OrbitControls for camera manipulation */}
+      <OrbitControls 
+        enablePan={true}
+        enableZoom={true}
+        enableRotate={true}
+        minDistance={15}
+        maxDistance={60}
+        maxPolarAngle={Math.PI / 2}
+      />
+
       <ambientLight intensity={0.3} />
       <hemisphereLight 
         skyColor="#e8f1f5" 
@@ -279,12 +333,13 @@ function CastleContent() {
         />
       </mesh>
       
-      {/* Towers */}
+      {/* Towers with interactivity */}
       {towers.map((tower, i) => (
         <Tower
           key={i}
           {...tower}
-          onClick={setSelectedTower}
+          onClick={handleTowerClick}
+          onHoverChange={handleTowerHover}
         />
       ))}
       
@@ -310,21 +365,34 @@ function CastleContent() {
       
       {/* Selected tower indicator */}
       {selectedTower && (
-        <mesh position={[0, 15, 0]}>
-          <sphereGeometry args={[0.5, 16, 16]} />
-          <meshStandardMaterial
-            color="#d4af37"
-            emissive="#d4af37"
-            emissiveIntensity={0.5}
-          />
-        </mesh>
+        <group position={[0, 15, 0]}>
+          <mesh>
+            <sphereGeometry args={[0.5, 16, 16]} />
+            <meshStandardMaterial
+              color="#d4af37"
+              emissive="#d4af37"
+              emissiveIntensity={0.5}
+              transparent
+              opacity={0.8}
+            />
+          </mesh>
+          {/* Rotating ring around indicator */}
+          <mesh rotation={[Math.PI / 2, 0, 0]}>
+            <torusGeometry args={[0.8, 0.1, 16, 32]} />
+            <meshStandardMaterial
+              color="#d4af37"
+              emissive="#d4af37"
+              emissiveIntensity={0.3}
+            />
+          </mesh>
+        </group>
       )}
     </>
   )
 }
 
 // Export default component
-export default function CastleScene() {
+export default function CastleScene({ onTowerInteraction }) {
   return (
     <div style={{ width: '100%', height: '100%' }}>
       <Canvas
@@ -334,7 +402,7 @@ export default function CastleScene() {
       >
         <color attach="background" args={['#0a1128']} />
         <fog attach="fog" args={['#0a1128', 20, 80]} />
-        <CastleContent />
+        <CastleContent onTowerInteraction={onTowerInteraction} />
       </Canvas>
     </div>
   )

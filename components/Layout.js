@@ -1,12 +1,12 @@
 // components/Layout.js
-// This version properly supports custom backgrounds
+// FIXED VERSION - Supports interactive backgrounds
 
 import Head from 'next/head'
 import Navigation from './Navigation'
 import Footer from './Footer'
 import LakesideBackground from './LakesideBackground'
 
-export default function Layout({ children, title = 'Aaisha Ameen', backgroundComponent }) {
+export default function Layout({ children, title = 'Aaisha Ameen', backgroundComponent, allowBackgroundInteraction = true }) {
   // Use custom background if provided, otherwise default to LakesideBackground
   const Background = backgroundComponent || LakesideBackground
   
@@ -26,7 +26,8 @@ export default function Layout({ children, title = 'Aaisha Ameen', backgroundCom
         width: '100%',
         height: '100%',
         zIndex: 0,
-        pointerEvents: 'none'
+        // KEY FIX: Allow pointer events when background needs to be interactive
+        pointerEvents: allowBackgroundInteraction ? 'auto' : 'none'
       }}>
         <Background />
       </div>
@@ -37,15 +38,23 @@ export default function Layout({ children, title = 'Aaisha Ameen', backgroundCom
         zIndex: 1,
         minHeight: '100vh',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        // When background is interactive, content needs to allow events to pass through
+        // except on actual content elements
+        pointerEvents: allowBackgroundInteraction ? 'none' : 'auto'
       }}>
-        <Navigation />
+        {/* Re-enable pointer events on nav and footer */}
+        <div style={{ pointerEvents: 'auto' }}>
+          <Navigation />
+        </div>
         
-        <main style={{ flex: 1 }}>
+        <main style={{ flex: 1, pointerEvents: 'auto' }}>
           {children}
         </main>
         
-        <Footer />
+        <div style={{ pointerEvents: 'auto' }}>
+          <Footer />
+        </div>
       </div>
     </>
   )
