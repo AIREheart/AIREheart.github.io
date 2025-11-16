@@ -19,7 +19,7 @@ const publications = [
   },
 ]
 
-const interests = [
+const interests = [ //Repro-Devo biology & Embryology, Trauma-related Epigenomes, Female neuroendocrinology & immunobiology, Cellular senescence (aging)
   {
     title: 'Machine Learning for Protein Structure',
     description: 'Developing novel architectures that combine physical constraints with data-driven approaches for accurate structure prediction.'
@@ -29,7 +29,7 @@ const interests = [
     description: 'Creating statistical frameworks to synthesize heterogeneous biological data types into coherent mechanistic insights.'
   },
   {
-    title: 'Network Biology',
+    title: 'Systems & Network Biology',
     description: 'Applying graph theory and dynamical systems to understand emergent properties of biological networks.'
   },
   {
