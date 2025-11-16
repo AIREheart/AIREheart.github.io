@@ -56,7 +56,7 @@ export default function Bookshelf() {
             lineHeight: '1.7',
             marginBottom: '1rem'
           }}>
-            Literary companions on the journey
+            Literary standouts I'd recommend in a heartbeat 
           </p>
           <a
             href="https://www.goodreads.com/user/show/13691462-aaisha"
@@ -72,7 +72,7 @@ export default function Bookshelf() {
             onMouseEnter={(e) => e.target.style.color = '#d4af37'}
             onMouseLeave={(e) => e.target.style.color = '#cd7f32'}
           >
-            View more on Goodreads →
+            View my never-ending TBR and more on Goodreads →
           </a>
         </header>
 

@@ -1,13 +1,17 @@
 // components/Layout.js
-// FIXED VERSION - Supports interactive backgrounds
+// ⚠️ CRITICAL: This file MUST be replaced for castle interactivity to work!
 
 import Head from 'next/head'
 import Navigation from './Navigation'
 import Footer from './Footer'
 import LakesideBackground from './LakesideBackground'
 
-export default function Layout({ children, title = 'Aaisha Ameen', backgroundComponent, allowBackgroundInteraction = true }) {
-  // Use custom background if provided, otherwise default to LakesideBackground
+export default function Layout({ 
+  children, 
+  title = 'Aaisha Ameen', 
+  backgroundComponent,
+  allowBackgroundInteraction = false  // ← NEW PROP - Critical for castle!
+}) {
   const Background = backgroundComponent || LakesideBackground
   
   return (
@@ -18,7 +22,7 @@ export default function Layout({ children, title = 'Aaisha Ameen', backgroundCom
         <meta name="description" content="Computational biologist exploring the intersection of wet lab and algorithms" />
       </Head>
       
-      {/* Three.js background - fixed position, behind everything */}
+      {/* Three.js background */}
       <div style={{
         position: 'fixed',
         top: 0,
@@ -26,24 +30,23 @@ export default function Layout({ children, title = 'Aaisha Ameen', backgroundCom
         width: '100%',
         height: '100%',
         zIndex: 0,
-        // KEY FIX: Allow pointer events when background needs to be interactive
+        // ⚠️ CRITICAL FIX: Conditional pointer events
         pointerEvents: allowBackgroundInteraction ? 'auto' : 'none'
       }}>
         <Background />
       </div>
       
-      {/* Main content - positioned above background */}
+      {/* Main content */}
       <div style={{
         position: 'relative',
         zIndex: 1,
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        // When background is interactive, content needs to allow events to pass through
-        // except on actual content elements
+        // ⚠️ CRITICAL: Let events pass through when background is interactive
         pointerEvents: allowBackgroundInteraction ? 'none' : 'auto'
       }}>
-        {/* Re-enable pointer events on nav and footer */}
+        {/* Re-enable pointer events on UI elements */}
         <div style={{ pointerEvents: 'auto' }}>
           <Navigation />
         </div>

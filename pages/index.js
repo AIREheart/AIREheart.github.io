@@ -40,7 +40,7 @@ export default function Home() {
             animation: 'fadeIn 1.2s ease-out 0.3s backwards',
             lineHeight: '1.5'
           }}>
-            Biochemist → Computational Biologist
+            "👋🏽 🌎"  - Aaisha A 
           </p>
           
           {/* Description */}
@@ -52,8 +52,8 @@ export default function Home() {
             lineHeight: '1.75',
             animation: 'fadeIn 1.2s ease-out 0.6s backwards'
           }}>
-            Exploring the intersection of wet lab intuition and computational discovery. 
-            Chronicles of transformation, philosophy in algorithms, and the poetry of protein folding.
+           {/*} Exploring the intersection of wet lab intuition and computational discovery. 
+            Chronicles of transformation, philosophy in algorithms, and the poetry of protein folding. */}
           </p>
 
 
@@ -67,8 +67,28 @@ export default function Home() {
             lineHeight: '1.75',
             animation: 'fadeIn 1.2s ease-out 0.6s backwards'
           }}>
-            Spurned from wanting to plant my own digital garden, insert hyperlink: https://www.technologyreview.com/2020/09/03/1007716/digital-gardens-let-you-cultivate-your-own-little-bit-of-the-internet/
-            
+            Spurred from wanting to plant my own&nbsp;
+            <a
+            href="https://www.technologyreview.com/2020/09/03/1007716/digital-gardens-let-you-cultivate-your-own-little-bit-of-the-internet/" 
+            style={{ color: 'gba(232, 241, 245, 0.85)', textDecoration: 'underline dotted' }}
+            >
+            digital garden 
+            </a>
+            , I launched Allegory, a personal site to chronicle the journey of a computational biochemist. 
+            Part passion project, part portfolio, but predominantly persistence, this is a living space for self-expression and refining my voice.
+            </p>
+
+
+          <p style={{
+            fontSize: 'clamp(1rem, 2.5vw, 1.3rem)',
+            color: 'rgba(166, 185, 240, 0.8)',
+            maxWidth: '900px',
+            margin: '0 auto 3rem',
+            lineHeight: '1.75',
+            animation: 'fadeIn 1.2s ease-out 0.6s backwards'
+          }}>
+          
+            Please click, scroll and swipe around to explore my pseudo-structured mental playground. After all, they say that play is the highest form of research.
           </p>
 
 
