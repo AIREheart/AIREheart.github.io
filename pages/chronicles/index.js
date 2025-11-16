@@ -40,7 +40,7 @@ export default function Chronicles({ allPostsData }) {
             color: 'rgba(232, 241, 245, 0.7)',
             lineHeight: '1.7'
           }}>
-            Thoughts on the journey from bench to bytes
+            thoughts and tensors 🖲️
           </p>
         </header>
         
