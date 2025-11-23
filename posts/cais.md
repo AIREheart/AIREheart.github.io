@@ -35,3 +35,19 @@ This proclivity for change can result in unruly control or alignment, posing the
 Cat or guacamole is one amusing thing when the differences still remain perceptible, but how about when differences surpass even our discernment capabilities, like when we're unsure of a crystal structure due to intrinsically disordered character (which accounts for about [40% of the eukaryotic proteome](https://pmc.ncbi.nlm.nih.gov/articles/PMC9693201/)). 
 
 Systematically evaluating the impediments needs to be thought of at the root, shaping criteria of the model's embryology as it traverses training, fine-tuning, validation and task-specific deployment.
+
+**Week 4: Requiem for Risk Characterization**
+
+Black swans, considered a subset of the infrequent yet impactful tail events, refer to unforeseen rarities or incidents with drastic consequences. Also understood as a negative snowball-like turn of events, black swans are missed considerations that fly under the radar before rearing their heads at a point that upends conventional understanding for or preparedness for them. 
+
+On the matrix of knowns by unknowns, they are particularly impervious risks since they fall under the "unknown unknown" classification and threaten our assumptions and capacities for knowledge. 
+
+
+![alt text](https://github.com/AIREheart/AIREheart.github.io/blob/main/posts/image.png?raw=true)
+
+As such, this concept reinforces our need for broadening design principles to account for buffering the unexpected, be it redundant layers of preventions and fail-safes or hyper-separation through narrowing capacities. 
+
+As the risk evaluator's aphorism goes, we learn to differentiate a hazard from a risk on the basis of 1) its nature and 2) the degree of its exposure. When the risk becomes the status of our knowledge and understanding, the stakes grow uncertain. The field concerned with what we know and acquire our knowledge, epistemology, applies to the development and deployment of AI systems and its importance becomes highlighted as black swans reflect the fissures in our worldviews. 
+
+
+Impactful mitigations against these events where we consider "hindsight being 20/20" would start with acceptance of a myriad and wide-breadth of perspectives to normalize the need for research and work, before focusing on establishing safe principles and resilient workflows. 
