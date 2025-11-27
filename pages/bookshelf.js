@@ -57,6 +57,7 @@ export default function Bookshelf() {
             marginBottom: '1rem'
           }}>
             Literary standouts I'd recommend in a heartbeat 
+            
           </p>
           <a
             href="https://www.goodreads.com/user/show/13691462-aaisha"
@@ -74,6 +75,8 @@ export default function Bookshelf() {
           >
             View my never-ending TBR and more on Goodreads →
           </a>
+         
+          
         </header>
 
         {loading ? (
@@ -142,6 +145,17 @@ export default function Bookshelf() {
           </div>
         )}
       </div>
+      <p style={{
+  marginTop: '4rem',
+  textAlign: 'center',
+  color: 'rgba(232, 241, 245, 0.6)'
+}}>
+  Explore my{' '}
+  <a href="/mindful-consumptions" style={{ color: '#d4af37' }}>
+    other curated sources 💭
+  </a>
+</p>
+
 
       <style jsx>{`
         @keyframes spin {

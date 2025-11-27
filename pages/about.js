@@ -102,7 +102,6 @@ export default function About() {
                 'AI alignment and ethics (model scope & scalability w.r.t. design, development and deployment)',
                 'Bioinformatics pipelines for multi-omics data',
                 'Protein structure prediction and design',
-                'Network analysis of biological systems'
               ].map((item, idx) => (
                 <li key={idx} style={{
                   padding: '0.75rem 0',
@@ -123,6 +122,12 @@ export default function About() {
                 </li>
               ))}
             </ul>
+
+            <p>
+              For more on my focused interests, please see{' '}
+              
+              <a href="/mindful-consumptions"><em>Mindful Consumptions</em></a>.
+            </p>
           </div>
 
           <div style={{
@@ -141,9 +146,10 @@ export default function About() {
               Philosophy
             </h2>
             <p style={{ marginBottom: '1.5rem' }}>
-              I believe the best computational biology emerges at the intersection of deep domain 
-              knowledge and technical sophistication. Like Janus, we must look both ways—honoring 
-              the biochemical reality while embracing computational abstraction.
+              Humanistic frameworks that place relativity and pluralistic alignment at the 🫀 of design. 
+              Interested by ontological (the nature of being) epistemics (the state of our knowledge) 
+
+              
             </p>
             </div>
 
