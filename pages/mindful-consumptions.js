@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import SnowfallBackground from '../components/SnowfallBackground'
+import SnowfallBackground from '../components/Snowfallbackground'
 
 const sources = [
   {
