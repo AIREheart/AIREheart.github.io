@@ -2,20 +2,20 @@ import Layout from '../components/Layout'
 
 const publications = [
   {
-    title: 'Deep Learning Approaches to Protein Structure Prediction',
-    authors: 'Your Name, Collaborator A, Collaborator B',
-    journal: 'Nature Computational Biology',
+    title: 'Improved thermal stabilization of VSV-vector with enhanced vacuum drying in pullulan and trehalose-based films',
+    authors: 'Jeremy A. Iwashkiw, Abdulhamid O. Mohamud, Natallia Kazhdan, Aaisha Ameen, Jody E. Beecher, Carlos D. M. Filipe & Brian D. Lichty',
+    journal: 'Scientific Reports',
     year: '2024',
-    doi: '10.1038/example',
-    description: 'Novel transformer architecture achieving state-of-the-art accuracy on CASP15 targets with reduced computational requirements.'
+    doi: 'https://doi.org/10.1038/s41598-024-69003-4',
+    description: 'One major limitation of effective vaccine delivery is its dependency on a robust cold chain infrastructure. While Vesicular stomatitis virus (VSV) has been demonstrated to be an effective viral vaccine vector for diseases including Ebola, its −70 °C storage requirement is a significant limitation for accessing disadvantaged locations and populations. Previous work has shown thermal stabilization of viral vaccines with a combination of pullulan and trehalose (PT) dried films. To improve the thermal stability of VSV, we optimized PT formulation concentrations and components, as well as drying methodology with enhanced vacuum drying. When formulated in PT films, VSV can be stored for 32 weeks at 4 °C with less than 2 log PFU loss, at 25 °C with 2.5 log PFU loss, and at 37 °C with 3.1 log PFU loss. These results demonstrate a significant advancement in VSV thermal stabilization, decreasing the cold chain requirements for VSV vectored vaccines.'
   },
   {
-    title: 'Multi-Omics Integration for Drug Target Discovery',
-    authors: 'Your Name, Research Team',
-    journal: 'Cell Systems',
-    year: '2023',
-    doi: '10.1016/example',
-    description: 'Systematic integration of transcriptomic, proteomic, and metabolomic data reveals novel therapeutic targets in metabolic disease.'
+    title: 'Development of Shelf Stable Formulation for Adenovirus Vectored Vaccines and Therapeutics',
+    authors: 'Jeremy A. Iwashkiw, Aaisha Ameen, Natallia Kazhdan, Sam Afkhami, Michael R. D\'Agostino, Kyle Amaral, Matthew S Miller, Jody E. Beecher, Carlos D. M. Filipe, Brian D. Lichty',
+    journal: 'Scientific Reports - under review',
+    year: '2025',
+    doi: 'https://doi.org/10.21203/rs.3.rs-7767949/v1',
+    description: 'A major limitation of therapeutic delivery is the cold chain storage requirement. Adenoviruses (AdV) have been demonstrated to be an effective delivery vector for several indications including COVID-19 vaccines but are limited by storage and transportation conditions. Previous work has demonstrated formulation and drying of vectored vaccines with pullulan and trehalose-based (PT) films significantly improves thermostabilization. To increase the accessibility of AdV based therapeutics, we developed a vacuum based drying methodology with optimized PT excipients resulting in a shelf stable product. We demonstrate the thermostability of formulated and dried AdV at 55oC for 7 weeks with less than 0.5 total log IU loss, and over 44 weeks at 37oC with less than 0.25 total log IU loss. Additionally, murine vaccination with the ChAd-TriCoV/Mac vaccine showed no difference in response between fresh and aged at 37oC for 44 weeks. These data demonstrate our formulation methodology’s performance, resulting in a shelf stable formulation for AdV based therapeutics.'
   },
 ]
 
